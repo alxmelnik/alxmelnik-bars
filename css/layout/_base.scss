@@ -1,0 +1,45 @@
+html, body {
+  height: 100%;
+  font-family: 'alegreya_sans', sans-serif;
+  font-style: normal;
+  font-size: 18px;
+}
+
+ul, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+b {
+  font-weight: bold;
+}
+
+ul li {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.wrapper {
+  overflow: hidden;
+  min-width: 1100px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+// .wrapper__content{
+//   flex: 1;
+// }
+
+.container {
+  margin: 0 auto;
+  width: 940px;
+}
+
+
+

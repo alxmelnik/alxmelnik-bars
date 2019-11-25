@@ -1,0 +1,21 @@
+.head {
+  color: $white;
+  margin-top: 24px;
+  margin-bottom: 100px;
+}
+
+.head__container {
+  width: 940px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.head__logo {
+  font-family: 'museo_sans';
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  line-height: 0.88;
+}

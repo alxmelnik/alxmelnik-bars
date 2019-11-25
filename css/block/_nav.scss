@@ -1,0 +1,21 @@
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+}
+
+.nav__link {
+  color: $white;
+  text-decoration: none;
+}
+

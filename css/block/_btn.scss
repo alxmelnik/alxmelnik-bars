@@ -1,0 +1,19 @@
+
+// .btn {
+// min-width: 155px;
+// min-height: 58px;
+// }
+
+
+.btn__link {
+  font-size: 19px;
+  font-weight: 800;
+  color: $green;
+  background-color: $white; 
+  border-radius: 29px;
+  padding: 23px 34px;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}

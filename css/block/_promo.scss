@@ -1,0 +1,83 @@
+.promo {
+  color:$white;
+}
+
+.promo__container {
+  width: 940px;
+}
+
+.promo__content {
+  max-width: 405px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color:$white;
+  margin-bottom: 94px;
+}
+
+.promo__title {
+  margin: 0;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.promo__text {
+  font-size: 21px;
+  padding-bottom: 56px;
+}
+
+
+
+
+
+.promo__desc {
+  font-size: 16px;
+}
+
+.promo__list {
+  display: flex;
+}
+
+.promo__item {
+  display: flex;
+  margin-right: 47px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+}
+
+.promo__icon {
+  height: 41px;
+  margin-right: 9px;
+
+  &--leaf {
+    width: 44px;
+    background-image: url('../../img/promo/icons/leaf.png');
+    background-repeat: no-repeat;
+    background-position: center center ;
+  }
+
+  &--car {
+    width: 50px;
+    background-image: url('../../img/promo/icons/car.png');
+    background-repeat: no-repeat;
+    background-position: center center ;
+  }
+
+  &--tape {
+    width: 42px;
+    background-image: url('../../img/promo/icons/tape.png');
+    background-repeat: no-repeat;
+    background-position: center center ;
+  }
+}
+
+.promo__item-desc {
+  max-width: 80px;
+}

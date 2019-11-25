@@ -1,0 +1,101 @@
+.why {
+  min-height: 650px ;
+  background-color: $white;
+  color: $brownish-grey;
+  text-align: center;
+
+  background-image: url('../../img/why/bg/raspberry.png'), url('../../img/why/bg/pattern.png');
+  background-repeat: no-repeat, no-repeat;
+  // background-size: cover;
+  background-position: bottom left, center left;
+  padding-top: 60px;
+  padding-bottom: 110px;
+}
+
+.why__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.why__desc {
+  max-width: 405px;
+  margin-bottom: 55px;
+}
+
+.why__title {
+  font-size: 48px;
+  font-weight: bold;
+  color: $black;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.why__list {
+  display: flex;
+  justify-content: center;
+}
+
+.why__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 275px;
+  margin-right: 72px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 67px;
+    height: 21px;
+    margin-right: 6px;
+    background-image: url('../../img/why/icons/circle.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center ;
+  }
+
+
+}
+
+.why__icon {
+  width: 125px;
+  height: 125px;
+  background-color: $grey;
+  border-radius: 50%;
+  margin-bottom: 35px;
+
+  &--man {
+    background-image: url('../../img/why/icons/man.png');
+    background-repeat: no-repeat;
+    background-position: center center ;
+  }
+  &--smile {
+    background-image: url('../../img/why/icons/smile.png');
+    background-repeat: no-repeat;
+    background-position: center center ;
+  }
+  &--muscle {
+    background-image: url('../../img/why/icons/muscle.png');
+    background-repeat: no-repeat;
+    background-position: center center ;
+  }
+}
+
+.why__item-subtitle {
+  font-size: 27px;
+  font-weight: bold;
+  color: $black;
+  margin-bottom: 30px;
+}
+
+.why__item-desc {
+  font-size: 18px;
+  font-weight: 300;
+}

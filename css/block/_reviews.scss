@@ -1,0 +1,100 @@
+.reviews {
+  min-height: 650px ;
+  background-color: $white;
+  color: $brownish-grey;
+
+  background-image: url('../../img/reviews/bg/berries_reviews.png'), 
+  url('../../img/reviews/bg/pattern_reviews.png'),
+  url('../../img/reviews/bg/berries_reviews.png');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  // background-size: cover;
+  background-position: bottom left, bottom left, top right;
+
+  padding-top: 69px;
+}
+
+.reviews__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews__title {
+  font-size: 48px;
+  font-weight: bold;
+  color: $black;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.reviews__content {
+  min-width: 940px;
+  min-height: 345px;
+  padding: 50px 180px 30px 45px;
+  display: flex;
+
+
+  background-image: url('../../img/reviews/bg/bg_reviews.png');
+  background-repeat: no-repeat, no-repeat;
+  // background-size: cover;
+  background-position: center center;
+
+  margin-bottom: 27px;
+}
+
+.reviews__pic {
+  width: 250px;
+  height: 260px;
+  overflow: hidden;
+  margin-right: 20px;
+} 
+
+.reviews__desc {
+max-width: 433px;
+}
+
+.reviews__subtitle {
+  font-size: 30px;
+  font-weight: 500;
+  color: $brownish-grey;
+  margin-bottom: 25px;
+}
+
+.reviews__message {
+  padding-bottom: 32px;
+}
+
+.reviews__user {
+  font-size: 18px;
+  font-weight: 500;
+  color: $brownish-grey;
+}
+
+.reviews__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__item {
+  margin-right: 12px;
+
+  &:last-child{
+    margin-right: 0px;
+  }
+
+}
+
+
+
+.reviews__avatar{
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+
+  &--active {
+  border: 5px solid $green;
+}
+
+
+}
