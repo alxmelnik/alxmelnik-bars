@@ -1,9 +1,9 @@
 .about {
-  min-height: 650px ;
+  min-height: 100vh;
   background-color: $blue;
   background-image: url('../../img/promo/bg/bg_bars.png'), url('../../img/promo/bg/bg_leaf.png');
   background-repeat: no-repeat, no-repeat;
-  // background-size: cover;
-  background-position: center 50px, center center;
+  // background-size:cover;
+  background-position: center 50px, right ;
   padding-bottom: 47px;
 }

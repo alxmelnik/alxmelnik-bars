@@ -392,11 +392,11 @@ template {
   display: none; }
 
 .about {
-  min-height: 650px;
+  min-height: 100vh;
   background-color: #61c4d9;
   background-image: url("../../img/promo/bg/bg_bars.png"), url("../../img/promo/bg/bg_leaf.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: center 50px, center center;
+  background-position: center 50px, right;
   padding-bottom: 47px; }
 
 .head {
@@ -553,7 +553,7 @@ template {
   border: 1px solid transparent; }
 
 .why {
-  min-height: 650px;
+  min-height: 100vh;
   background-color: #ffffff;
   color: #666666;
   text-align: center;
@@ -561,7 +561,16 @@ template {
   background-repeat: no-repeat, no-repeat;
   background-position: bottom left, center left;
   padding-top: 60px;
-  padding-bottom: 110px; }
+  padding-bottom: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .why__container {
   display: -webkit-box;
@@ -595,6 +604,7 @@ template {
   justify-content: center; }
 
 .why__item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -610,16 +620,12 @@ template {
   .why__item:last-child {
     margin-right: 0px; }
   .why__item::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 67px;
-    height: 21px;
-    margin-right: 6px;
-    background-image: url("../../img/why/icons/circle.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center; }
+    content: url("../../img/why/icons/circle.png");
+    position: absolute;
+    top: 20%;
+    right: -27%; }
+  .why__item:last-child::after {
+    content: none; }
 
 .why__icon {
   width: 125px;
@@ -651,7 +657,7 @@ template {
   font-weight: 300; }
 
 .reviews {
-  min-height: 650px;
+  min-height: 100vh;
   background-color: #ffffff;
   color: #666666;
   background-image: url("../../img/reviews/bg/berries_reviews.png"), url("../../img/reviews/bg/pattern_reviews.png"), url("../../img/reviews/bg/berries_reviews.png");
@@ -694,6 +700,10 @@ template {
   width: 250px;
   height: 260px;
   overflow: hidden;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
   margin-right: 20px; }
 
 .reviews__desc {
@@ -732,6 +742,16 @@ template {
 .reviews__avatar {
   width: 67px;
   height: 67px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  -o-object-fit: none;
+  object-fit: none;
+  -o-object-position: center;
+  object-position: center; }
   .reviews__avatar--active {
     border: 5px solid #0f5a47; }
+  .reviews__avatar--two {
+    -o-object-position: center -12px;
+    object-position: center -12px; }
+  .reviews__avatar--three {
+    -o-object-position: -104px -43px;
+    object-position: -104px -43px; }

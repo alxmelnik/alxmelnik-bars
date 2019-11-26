@@ -1,5 +1,5 @@
 .why {
-  min-height: 650px ;
+  min-height: 100vh;
   background-color: $white;
   color: $brownish-grey;
   text-align: center;
@@ -10,13 +10,15 @@
   background-position: bottom left, center left;
   padding-top: 60px;
   padding-bottom: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .why__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .why__desc {
@@ -38,9 +40,11 @@
 }
 
 .why__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   max-width: 275px;
   margin-right: 72px;
 
@@ -48,17 +52,27 @@
     margin-right: 0px;
   }
 
+  // &::after {
+  //   content: url('../../img/why/icons/circle.png');
+  //   display: inline-block;
+  //   vertical-align: middle;
+  //   width: 67px;
+  //   height: 21px;
+  //   margin-right: 6px;
+  //   background-image: url('../../img/why/icons/circle.png');
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   background-position: center center ;
+  // }
   &::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 67px;
-    height: 21px;
-    margin-right: 6px;
-    background-image: url('../../img/why/icons/circle.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center ;
+    content: url('../../img/why/icons/circle.png');
+    position: absolute;
+    top: 20%;
+    right: -27%;
+  }
+  
+  &:last-child::after {
+    content: none;
   }
 
 

@@ -1,5 +1,5 @@
 .reviews {
-  min-height: 650px ;
+  min-height: 100vh;
   background-color: $white;
   color: $brownish-grey;
 
@@ -46,6 +46,8 @@
   width: 250px;
   height: 260px;
   overflow: hidden;
+  object-fit: cover;
+  object-position: center;
   margin-right: 20px;
 } 
 
@@ -91,10 +93,18 @@ max-width: 433px;
   width: 67px;
   height: 67px;
   border-radius: 50%;
+  object-fit: none;
+  object-position: center;
 
   &--active {
   border: 5px solid $green;
 }
 
+  &--two {
+    object-position: center -12px;
+  }
+  &--three {
+    object-position: -104px -43px;
+  }
 
 }
