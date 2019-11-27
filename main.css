@@ -393,16 +393,26 @@ template {
 
 .about {
   min-height: 100vh;
+  min-height: 650px;
   background-color: #61c4d9;
-  background-image: url("../../img/promo/bg/bg_bars.png"), url("../../img/promo/bg/bg_leaf.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center 50px, right;
-  padding-bottom: 47px; }
+  background-image: url("../../img/promo/bg/bg_leaf.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-bottom: 47px;
+  position: relative; }
+  .about:after {
+    content: url("../../img/promo/bg/bg_bars.png");
+    position: absolute;
+    top: 12%;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%); }
 
 .head {
   color: #ffffff;
   margin-top: 24px;
-  margin-bottom: 100px; }
+  margin-bottom: 90px; }
 
 .head__container {
   width: 940px;
@@ -663,6 +673,15 @@ template {
   background-image: url("../../img/reviews/bg/berries_reviews.png"), url("../../img/reviews/bg/pattern_reviews.png"), url("../../img/reviews/bg/berries_reviews.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: bottom left, bottom left, top right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-top: 69px; }
 
 .reviews__container {

@@ -9,6 +9,9 @@
   background-repeat: no-repeat, no-repeat, no-repeat;
   // background-size: cover;
   background-position: bottom left, bottom left, top right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   padding-top: 69px;
 }
