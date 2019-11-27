@@ -393,7 +393,6 @@ template {
 
 .about {
   min-height: 100vh;
-  min-height: 650px;
   background-color: #61c4d9;
   background-image: url("../../img/promo/bg/bg_leaf.png");
   background-repeat: no-repeat;
