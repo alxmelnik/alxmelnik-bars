@@ -1,0 +1,47 @@
+.foot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+ 
+}
+
+  .foot__container {
+    min-height: 93px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+  }
+
+  .foot__adress {
+    font-size: 21px;
+    color: $black;
+    text-align: left;
+  }
+
+  .foot__contact--phone{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    line-height: 1.43;
+    color: $green;
+    text-decoration: none;
+  
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 12px;
+      height: 12px;
+      margin-right: 6px;
+      background-image: url('../../img/foot/foot_phone.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center ;
+    }
+  
+  }

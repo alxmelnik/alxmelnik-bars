@@ -1,5 +1,7 @@
 .about {
   min-height: 100vh;
+  // min-height: 650px;
+  
   background-color: $blue;
   background-image: url('../../img/promo/bg/bg_leaf.png');
   background-repeat: no-repeat;
@@ -9,9 +11,10 @@
   position: relative;
 
   &:after {
-    content: url('../../img/promo/bg/bg_bars.png');
+    // content: url('../../img/promo/bg/bg_bars.png');
+    content: url('../../img/promo/bg/bg-decoration.png');
     position: absolute;
-    top: 12%;
+    bottom: -8%;
     right: 50%;
     transform: translateX(50%);
   }

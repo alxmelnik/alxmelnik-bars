@@ -6,6 +6,15 @@
   width: 940px;
 }
 
+.promo__box {
+  display: flex;
+}
+
+.promo__left {
+  margin-top: 90px;
+  margin-right: 30px;
+}
+
 .promo__content {
   max-width: 405px;
   display: flex;
@@ -31,6 +40,9 @@
 }
 
 
+.promo__photo {
+  max-width: 100%;
+}
 
 
 

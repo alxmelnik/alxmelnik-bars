@@ -1,0 +1,95 @@
+.menu {
+  // max-height: 100vh;
+  height: 650px;
+  background-color: black;
+  color: $white;
+  background-image: linear-gradient(rgba(41, 39, 39, 0.9),rgba(41, 39, 39, 0.9)),  url('../../img/menu/bg/bg_cookie.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+
+}
+
+.menu__container {
+  height: 650px;
+  width: 1100px;
+  border: 3px dotted green;
+  position: relative;
+}
+
+.menu__title {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 16%;
+  left: 7%;
+}
+
+.menu-accordeon__trigger--milk {
+  background: linear-gradient(rgba(41, 39, 39, 0.4),rgba(41, 39, 39, 0.4)), url('../../img/menu/bg/bg_bars_milk.png') center center no-repeat;
+  
+}
+.menu-accordeon__trigger--honey {
+  background: linear-gradient(rgba(41, 39, 39, 0.4),rgba(41, 39, 39, 0.4)), url('../../img/menu/bg/bg_bars_honey.png') center center no-repeat;
+}
+.menu-accordeon__trigger--wild {
+  background: linear-gradient(rgba(41, 39, 39, 0.4),rgba(41, 39, 39, 0.4)), url('../../img/menu/bg/bg_wild_berries.png') center center no-repeat;
+}
+.menu-accordeon {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.menu-accordeon__list {
+  font-size: 16px;
+  display: flex;
+  height: 100%;
+}
+
+.menu-accordeon__item {
+  height: 100%;
+  display: flex;
+}
+
+.menu-accordeon__trigger {
+  cursor: pointer;
+  display: inline-block;
+  min-width: 100px;
+  position: relative;
+  background-size: cover;
+
+  &--active + .menu-accordeon__content {
+    width: 530px;
+    padding-top: 50px;
+  padding-left: 27px;
+  padding-right: 127px;
+    background-color: rgba(58, 61, 63, 0.93) ;
+  }
+}
+
+.menu-accordeon__trigger-text {
+  display: block;
+  font-size: 48px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 7%;
+  left:50%;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  transform-origin: 0 50%;
+}
+
+.menu-accordeon__content {
+  width: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  
+}
+
+.menu-accordeon__text {
+  font-size: 16px;
+  color: $white;
+}
