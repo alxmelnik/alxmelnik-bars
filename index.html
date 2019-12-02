@@ -12,7 +12,7 @@
 
 <body>
   <div class="wrapper">
-    <section class="about">
+    <section class="section about">
       <!-- Head -->
       <header class="head">
         <div class="head__container container">
@@ -70,15 +70,28 @@
           <div class="promo__desc">
             <ul class="promo__list">
               <li class="promo__item">
-                <div class="promo__icon promo__icon--leaf"></div>
+                <div class="promo__icon promo__icon--leaf">
+                  <svg class="promo__icon-pic" style="fill:none;stroke:#b0f7ff;stroke-width:0.5;stroke-miterlimit:10;">
+                    <use xlink:href="./img/icons/icons_svg/sprite.svg#leaf"></use>
+                  </svg>
+
+                </div>
                 <div class="promo__item-desc">100% натуральный продукт</div>
               </li>
               <li class="promo__item">
-                <div class="promo__icon promo__icon--car"></div>
+                <div class="promo__icon promo__icon--car">
+                  <svg class="promo__icon-pic" style="fill:none;stroke:#b0f7ff;stroke-width:0.5;stroke-miterlimit:10;">
+                    <use xlink:href="./img/icons/icons_svg/sprite.svg#car"></use>
+                  </svg>
+                </div>
                 <div class="promo__item-desc">3-5 дней доставка по РФ</div>
               </li>
               <li class="promo__item">
-                <div class="promo__icon promo__icon--tape"></div>
+                <div class="promo__icon promo__icon--tape">
+                  <svg class="promo__icon-pic" style="fill:none;stroke:#b0f7ff;stroke-width:0.5;stroke-miterlimit:10;">
+                    <use xlink:href="./img/icons/icons_svg/sprite.svg#tape"></use>
+                  </svg>
+                </div>
                 <div class="promo__item-desc">Не портит фигуру</div>
               </li>
             </ul>
@@ -88,7 +101,7 @@
     </section>
 
     <!-- Why -->
-    <section class="why" id="why">
+    <section class="section why" id="why">
       <div class="why__container container">
         <div class="why__desc">
           <h2 class="why__title">почему chocco?</h2>
@@ -99,7 +112,11 @@
 
         <ul class="why__list">
           <li class="why__item">
-            <div class="why__icon why__icon--man"></div>
+            <div class="why__icon why__icon--man">
+              <svg class="why__icon-pic" style="fill:none;stroke:#2a2a29;stroke-width:0.75;stroke-miterlimit:10;">
+                <use xlink:href="./img/icons/icons_svg/sprite.svg#man"></use>
+              </svg>
+            </div>
             <h3 class="why__item-subtitle">Полезно</h3>
             <span class="why__item-desc">Натуральность - ключевое качество
               нашей продукции. Мы используем
@@ -107,7 +124,11 @@
             </span>
           </li>
           <li class="why__item">
-            <div class="why__icon why__icon--smile"></div>
+            <div class="why__icon why__icon--smile">
+              <svg class="why__icon-pic" style="fill:none;stroke:#2a2a29;stroke-width:0.75;stroke-miterlimit:10;">
+                <use xlink:href="./img/icons/icons_svg/sprite.svg#smile"></use>
+              </svg>
+            </div>
             <h3 class="why__item-subtitle">Вкусно</h3>
             <span class="why__item-desc">Нежный, ненавязчивый, изысканный –
               так клиенты описывают вкусовые
@@ -115,7 +136,11 @@
             </span>
           </li>
           <li class="why__item">
-            <div class="why__icon why__icon--muscle"></div>
+            <div class="why__icon why__icon--muscle">
+              <svg class="why__icon-pic" style="fill:none;stroke:#2a2a29;stroke-width:0.75;stroke-miterlimit:10;">
+                <use xlink:href="./img/icons/icons_svg/sprite.svg#muscle"></use>
+              </svg>
+            </div>
             <h3 class="why__item-subtitle">Питательно</h3>
             <span class="why__item-desc">Высокое содержание качественного
               белка, а также всех необходимых
@@ -127,7 +152,7 @@
     </section>
 
     <!-- Team -->
-    <section class="team" id="team">
+    <section class="section team" id="team">
       <div class="team__container container">
         <h2 class="team__title">команда</h2>
         <div class="team-accordeon">
@@ -179,7 +204,7 @@
     </section>
 
     <!-- Menu -->
-    <section class="menu" id="menu">
+    <section class="section menu" id="menu">
       <div class="menu__container container">
         <h2 class="menu__title">Меню</h2>
         <div class="menu-accordeon">
@@ -233,7 +258,7 @@
     </section>
 
     <!-- Reviews -->
-    <section class="reviews" id="reviews">
+    <section class="section reviews" id="reviews">
       <div class="reviews__container container">
         <h2 class="reviews__title">отзывы</h2>
         <div class="reviews__content">
@@ -273,7 +298,7 @@
     </section>
 
     <!-- Delivery -->
-    <section class="delivery" id="delivery">
+    <section class="section delivery" id="delivery">
       <div class="delivery__container container">
         <h2 class="delivery__title">Закажите доставку</h2>
 
@@ -332,12 +357,10 @@
                 <div class="form__row">
                   <label class="form__radio">
                     <input class="form__radio-elem" type="radio" checked name="payment">
-                    <div class="form__radio-fake"></div>
                     <div class="form__radio-title">Потребуется сдача</div>
                   </label>
                   <label class="form__radio">
                     <input class="form__radio-elem" type="radio" checked name="payment">
-                    <div class="form__radio-fake"></div>
                     <div class="form__radio-title">Оплата по карте</div>
                   </label>
                 </div>
@@ -345,7 +368,6 @@
                 <div class="form__row">
                   <label class="form__radio form__radio-checkbox">
                     <input type="checkbox" class="form__checkbox-elem" name="callback">
-                    <div class="form__radio-fake"></div>
                     <div class="form__checkbox-title">Не перезванивать</div>
                   </label>
                 </div>
@@ -362,7 +384,7 @@
       </div>
     </section>
 
-    <section class="location" id="location">
+    <section class="section location" id="location">
       <div class="map">
       </div>
 
@@ -378,16 +400,32 @@
           <div class="social">
               <ul class="social__list">
                 <li class="social__item ">
-                  <a href="https://vk.com/" class="social__link social__link--icon--vk "></a>
+                  <a href="https://vk.com/" class="social__link social__link--icon--vk ">
+                    <svg class="social__link-icon" style="fill:#B3B3B3">
+                      <use xlink:href="./img/icons/icons_svg/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="social__item social__item--push">
-                  <a href="https://www.facebook.com/" class="social__link social__link--icon--fb"></a>
+                  <a href="https://www.facebook.com/" class="social__link social__link--icon--fb">
+                    <svg class="social__link-icon" style="fill:#B3B3B3">
+                      <use xlink:href="./img/icons/icons_svg/sprite.svg#fb"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="social__item">
-                  <a href="http://instagram.com/" class="social__link social__link--icon--insta"></a>
+                  <a href="http://instagram.com/" class="social__link social__link--icon--insta">
+                    <svg class="social__link-icon" style="fill:#B3B3B3">
+                      <use xlink:href="./img/icons/icons_svg/sprite.svg#insta"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="social__item">
-                  <a href="https://twitter.com/" class="social__link social__link--icon--twitter"></a>
+                  <a href="https://twitter.com/" class="social__link social__link--icon--twitter">
+                    <svg class="social__link-icon" style="fill:#B3B3B3">
+                      <use xlink:href="./img/icons/icons_svg/sprite.svg#twitter"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -398,7 +436,6 @@
       </footer>
 
     </section>
-
 
 
 

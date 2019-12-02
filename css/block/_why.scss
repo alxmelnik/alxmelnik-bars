@@ -1,5 +1,4 @@
 .why {
-  min-height: 100vh;
   background-color: $white;
   color: $brownish-grey;
   text-align: center;
@@ -84,22 +83,30 @@
   background-color: $grey;
   border-radius: 50%;
   margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &--man {
-    background-image: url('../../img/why/icons/man.png');
-    background-repeat: no-repeat;
-    background-position: center center ;
-  }
-  &--smile {
-    background-image: url('../../img/why/icons/smile.png');
-    background-repeat: no-repeat;
-    background-position: center center ;
-  }
-  &--muscle {
-    background-image: url('../../img/why/icons/muscle.png');
-    background-repeat: no-repeat;
-    background-position: center center ;
-  }
+  // &--man {
+  //   background-image: url('../../img/why/icons/man.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center center ;
+  // }
+  // &--smile {
+  //   background-image: url('../../img/why/icons/smile.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center center ;
+  // }
+  // &--muscle {
+  //   background-image: url('../../img/why/icons/muscle.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center center ;
+  // }
+}
+
+.why__icon-pic {
+  max-width: 70px;
+  max-height: 69px;
 }
 
 .why__item-subtitle {

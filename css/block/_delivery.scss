@@ -1,5 +1,4 @@
 .delivery {
-  min-height: 100vh;
   color: $green;
 
   background-image: url('../../img/delivery/bg/pattern_delivery.png');
@@ -9,7 +8,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 10%;
 }
 
 .delivery__container {
@@ -43,8 +41,7 @@
 
 .form__row {
   display: flex;
-  // margin-bottom: 20px;
-  flex: 1;
+  margin-bottom: 20px;
 }
 
 
@@ -135,7 +132,7 @@
 
 
 .form__radio-elem:checked {
-  &+ .form__radio-title {
+  &~ .form__radio-title {
     &:after {
       opacity: 1;
     }
@@ -176,18 +173,19 @@
   display: block;
   width: 14px;
   height: 14px;
-  border-radius: 50%;
-  background-color: $green;
+  // border-radius: 50%;
+  // background-color: $green;
+  background: url("../../img/delivery/check.png") center center no-repeat ;
   opacity: 0;
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 7px;
   z-index: 2;
 }
 
 
-.form__checkbax-elem:checked {
-  &+ .form__checkbox-title {
+.form__checkbox-elem:checked {
+  &~ .form__checkbox-title {
     &:after {
       opacity: 1;
     }
@@ -219,4 +217,5 @@
   cursor: pointer;
   background: transparent;
   border: 1px solid transparent;
+  outline: none;
 }

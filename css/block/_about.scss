@@ -1,21 +1,19 @@
 .about {
-  min-height: 100vh;
-  // min-height: 650px;
-  
   background-color: $blue;
   background-image: url('../../img/promo/bg/bg_leaf.png');
   background-repeat: no-repeat;
   // background-size:cover;
   background-position:  right ;
-  padding-bottom: 47px;
   position: relative;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
 
-  &:after {
-    // content: url('../../img/promo/bg/bg_bars.png');
-    content: url('../../img/promo/bg/bg-decoration.png');
-    position: absolute;
-    bottom: -8%;
-    right: 50%;
-    transform: translateX(50%);
-  }
+  // &:after {
+  //   content: url('../../img/promo/bg/bg-decoration.png');
+  //   position: absolute;
+  //   bottom: -8%;
+  //   right: 50%;
+  //   transform: translateX(50%);
+  // }
 }

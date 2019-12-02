@@ -8,10 +8,11 @@
 
 .promo__box {
   display: flex;
+  margin-top: 55px;
 }
 
 .promo__left {
-  margin-top: 90px;
+  padding-top: 90px;
   margin-right: 30px;
 }
 
@@ -39,9 +40,20 @@
   padding-bottom: 56px;
 }
 
+.promo__right {
+  position: relative;
+
+  &:after {
+    content: url('../../img/promo/bg/bg-decoration.png');
+    position: absolute;
+    top: 57%;
+    right: 102%;
+    transform: translateX(50%);
+  }
+}
 
 .promo__photo {
-  max-width: 100%;
+  width: 100%;
 }
 
 
@@ -68,26 +80,33 @@
   height: 41px;
   margin-right: 9px;
 
-  &--leaf {
-    width: 44px;
-    background-image: url('../../img/promo/icons/leaf.png');
-    background-repeat: no-repeat;
-    background-position: center center ;
-  }
 
-  &--car {
-    width: 50px;
-    background-image: url('../../img/promo/icons/car.png');
-    background-repeat: no-repeat;
-    background-position: center center ;
-  }
 
-  &--tape {
-    width: 42px;
-    background-image: url('../../img/promo/icons/tape.png');
-    background-repeat: no-repeat;
-    background-position: center center ;
-  }
+  // &--leaf {
+  //   width: 44px;
+  //   background-image: url('../../img/promo/icons/leaf.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center center ;
+  // }
+
+  // &--car {
+  //   width: 50px;
+  //   background-image: url('../../img/promo/icons/car.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center center ;
+  // }
+
+  // &--tape {
+  //   width: 42px;
+  //   background-image: url('../../img/promo/icons/tape.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center center ;
+  // }
+}
+
+.promo__icon-pic {
+  max-width: 50px;
+  max-height: 41px;
 }
 
 .promo__item-desc {

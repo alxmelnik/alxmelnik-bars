@@ -46,13 +46,19 @@
   font-weight: 500;
   font-style: normal; }
 
-html, body {
+html,
+body {
   height: 100%;
   font-family: 'alegreya_sans', sans-serif;
   font-style: normal;
   font-size: 18px; }
 
-ul, h1, h2, h3, h4, p {
+ul,
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
   padding: 0; }
 
@@ -77,6 +83,10 @@ ul li {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
+
+.section {
+  height: 100vh;
+  min-height: 650px; }
 
 .container {
   margin: 0 auto;
@@ -392,25 +402,25 @@ template {
   display: none; }
 
 .about {
-  min-height: 100vh;
   background-color: #61c4d9;
   background-image: url("../../img/promo/bg/bg_leaf.png");
   background-repeat: no-repeat;
   background-position: right;
-  padding-bottom: 47px;
-  position: relative; }
-  .about:after {
-    content: url("../../img/promo/bg/bg-decoration.png");
-    position: absolute;
-    bottom: -8%;
-    right: 50%;
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%); }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .head {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
   color: #ffffff;
-  margin-top: 24px; }
+  z-index: 10; }
 
 .head__container {
   width: 940px;
@@ -485,10 +495,11 @@ template {
 .promo__box {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-top: 55px; }
 
 .promo__left {
-  margin-top: 90px;
+  padding-top: 90px;
   margin-right: 30px; }
 
 .promo__content {
@@ -519,8 +530,19 @@ template {
   font-size: 21px;
   padding-bottom: 56px; }
 
+.promo__right {
+  position: relative; }
+  .promo__right:after {
+    content: url("../../img/promo/bg/bg-decoration.png");
+    position: absolute;
+    top: 57%;
+    right: 102%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%); }
+
 .promo__photo {
-  max-width: 100%; }
+  width: 100%; }
 
 .promo__desc {
   font-size: 16px; }
@@ -541,21 +563,10 @@ template {
 .promo__icon {
   height: 41px;
   margin-right: 9px; }
-  .promo__icon--leaf {
-    width: 44px;
-    background-image: url("../../img/promo/icons/leaf.png");
-    background-repeat: no-repeat;
-    background-position: center center; }
-  .promo__icon--car {
-    width: 50px;
-    background-image: url("../../img/promo/icons/car.png");
-    background-repeat: no-repeat;
-    background-position: center center; }
-  .promo__icon--tape {
-    width: 42px;
-    background-image: url("../../img/promo/icons/tape.png");
-    background-repeat: no-repeat;
-    background-position: center center; }
+
+.promo__icon-pic {
+  max-width: 50px;
+  max-height: 41px; }
 
 .promo__item-desc {
   max-width: 80px; }
@@ -573,7 +584,6 @@ template {
   border: 1px solid transparent; }
 
 .why {
-  min-height: 100vh;
   background-color: #ffffff;
   color: #666666;
   text-align: center;
@@ -652,19 +662,20 @@ template {
   height: 125px;
   background-color: #f2f5f4;
   border-radius: 50%;
-  margin-bottom: 35px; }
-  .why__icon--man {
-    background-image: url("../../img/why/icons/man.png");
-    background-repeat: no-repeat;
-    background-position: center center; }
-  .why__icon--smile {
-    background-image: url("../../img/why/icons/smile.png");
-    background-repeat: no-repeat;
-    background-position: center center; }
-  .why__icon--muscle {
-    background-image: url("../../img/why/icons/muscle.png");
-    background-repeat: no-repeat;
-    background-position: center center; }
+  margin-bottom: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.why__icon-pic {
+  max-width: 70px;
+  max-height: 69px; }
 
 .why__item-subtitle {
   font-size: 27px;
@@ -677,7 +688,6 @@ template {
   font-weight: 300; }
 
 .team {
-  min-height: 100vh;
   background-color: #ffffff;
   color: #0d0d0d;
   text-align: center;
@@ -782,22 +792,16 @@ template {
   padding-bottom: 1px; }
 
 .menu {
-  height: 650px;
-  background-color: black;
   color: #ffffff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 39, 39, 0.9)), to(rgba(41, 39, 39, 0.9))), url("../../img/menu/bg/bg_cookie.png");
-  background-image: -webkit-linear-gradient(rgba(41, 39, 39, 0.9), rgba(41, 39, 39, 0.9)), url("../../img/menu/bg/bg_cookie.png");
-  background-image: -o-linear-gradient(rgba(41, 39, 39, 0.9), rgba(41, 39, 39, 0.9)), url("../../img/menu/bg/bg_cookie.png");
-  background-image: linear-gradient(rgba(41, 39, 39, 0.9), rgba(41, 39, 39, 0.9)), url("../../img/menu/bg/bg_cookie.png");
+  background-image: url("../../img/menu/bg/bg_cookie.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative; }
 
 .menu__container {
-  height: 650px;
+  height: 100%;
   width: 1100px;
-  border: 3px dotted green;
   position: relative; }
 
 .menu__title {
@@ -805,26 +809,17 @@ template {
   font-weight: bold;
   text-transform: uppercase;
   position: absolute;
-  top: 16%;
+  top: 15%;
   left: 7%; }
 
 .menu-accordeon__trigger--milk {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 39, 39, 0.4)), to(rgba(41, 39, 39, 0.4))), url("../../img/menu/bg/bg_bars_milk.png") center center no-repeat;
-  background: -webkit-linear-gradient(rgba(41, 39, 39, 0.4), rgba(41, 39, 39, 0.4)), url("../../img/menu/bg/bg_bars_milk.png") center center no-repeat;
-  background: -o-linear-gradient(rgba(41, 39, 39, 0.4), rgba(41, 39, 39, 0.4)), url("../../img/menu/bg/bg_bars_milk.png") center center no-repeat;
-  background: linear-gradient(rgba(41, 39, 39, 0.4), rgba(41, 39, 39, 0.4)), url("../../img/menu/bg/bg_bars_milk.png") center center no-repeat; }
+  background: url("../../img/menu/bg/bg_bars_milk.png") center center no-repeat; }
 
 .menu-accordeon__trigger--honey {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 39, 39, 0.4)), to(rgba(41, 39, 39, 0.4))), url("../../img/menu/bg/bg_bars_honey.png") center center no-repeat;
-  background: -webkit-linear-gradient(rgba(41, 39, 39, 0.4), rgba(41, 39, 39, 0.4)), url("../../img/menu/bg/bg_bars_honey.png") center center no-repeat;
-  background: -o-linear-gradient(rgba(41, 39, 39, 0.4), rgba(41, 39, 39, 0.4)), url("../../img/menu/bg/bg_bars_honey.png") center center no-repeat;
-  background: linear-gradient(rgba(41, 39, 39, 0.4), rgba(41, 39, 39, 0.4)), url("../../img/menu/bg/bg_bars_honey.png") center center no-repeat; }
+  background: url("../../img/menu/bg/bg_bars_honey.png") center center no-repeat; }
 
 .menu-accordeon__trigger--wild {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 39, 39, 0.4)), to(rgba(41, 39, 39, 0.4))), url("../../img/menu/bg/bg_wild_berries.png") center center no-repeat;
-  background: -webkit-linear-gradient(rgba(41, 39, 39, 0.4), rgba(41, 39, 39, 0.4)), url("../../img/menu/bg/bg_wild_berries.png") center center no-repeat;
-  background: -o-linear-gradient(rgba(41, 39, 39, 0.4), rgba(41, 39, 39, 0.4)), url("../../img/menu/bg/bg_wild_berries.png") center center no-repeat;
-  background: linear-gradient(rgba(41, 39, 39, 0.4), rgba(41, 39, 39, 0.4)), url("../../img/menu/bg/bg_wild_berries.png") center center no-repeat; }
+  background: url("../../img/menu/bg/bg_wild_berries.png") center center no-repeat; }
 
 .menu-accordeon {
   display: -webkit-box;
@@ -886,7 +881,6 @@ template {
   color: #ffffff; }
 
 .reviews {
-  min-height: 100vh;
   background-color: #ffffff;
   color: #666666;
   background-image: url("../../img/reviews/bg/berries_reviews.png"), url("../../img/reviews/bg/pattern_reviews.png"), url("../../img/reviews/bg/strawberry_reviews.png");
@@ -995,7 +989,6 @@ template {
     object-position: -104px -43px; }
 
 .delivery {
-  min-height: 100vh;
   color: #0f5a47;
   background-image: url("../../img/delivery/bg/pattern_delivery.png");
   background-repeat: no-repeat;
@@ -1009,8 +1002,7 @@ template {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  padding-top: 10%; }
+  justify-content: center; }
 
 .delivery__container {
   display: -webkit-box;
@@ -1053,9 +1045,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
+  margin-bottom: 20px; }
 
 .form__block {
   -webkit-box-flex: 1;
@@ -1125,7 +1115,7 @@ template {
   left: 7px;
   z-index: 2; }
 
-.form__radio-elem:checked + .form__radio-title:after {
+.form__radio-elem:checked ~ .form__radio-title:after {
   opacity: 1; }
 
 .form__checkbox-elem {
@@ -1156,15 +1146,14 @@ template {
   display: block;
   width: 14px;
   height: 14px;
-  border-radius: 50%;
-  background-color: #0f5a47;
+  background: url("../../img/delivery/check.png") center center no-repeat;
   opacity: 0;
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 7px;
   z-index: 2; }
 
-.form__checkbax-elem:checked + .form__checkbox-title:after {
+.form__checkbox-elem:checked ~ .form__checkbox-title:after {
   opacity: 1; }
 
 .form__row-btn {
@@ -1189,10 +1178,10 @@ template {
   text-decoration: none;
   cursor: pointer;
   background: transparent;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  outline: none; }
 
 .location {
-  min-height: 100vh;
   background-image: url("../../img/location/bg/bg_map.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1266,26 +1255,21 @@ template {
 
 .social__item:hover,
 .social__item--push {
-  -webkit-transition: 0.5s ease-out;
-  -o-transition: 0.5s ease-out;
-  transition: 0.5s ease-out; }
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
 
 .social__link {
   display: block;
   width: 20px;
   height: 20px; }
 
-.social__link--icon--vk {
-  background: url("../../img/icons/social/vk.png") no-repeat center center; }
-
-.social__link--icon--fb {
-  background: url("../../img/icons/social/fb.png") no-repeat center center; }
-
-.social__link--icon--insta {
-  background: url("../../img/icons/social/inst.png") no-repeat center center; }
-
-.social__link--icon--twitter {
-  background: url("../../img/icons/social/twitter.png") no-repeat center center; }
+.social__link-icon {
+  max-width: 20px;
+  max-height: 20px; }
 
 .fixed-menu {
   position: fixed;
