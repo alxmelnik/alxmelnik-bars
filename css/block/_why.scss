@@ -7,11 +7,15 @@
   background-repeat: no-repeat, no-repeat;
   // background-size: cover;
   background-position: bottom left, center left;
-  padding-top: 60px;
-  padding-bottom: 110px;
+  padding-top: rem(60px);
+  padding-bottom: rem(110px);
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include phones {
+    background-image: none;
+  }
 }
 
 .why__container {
@@ -21,21 +25,35 @@
 }
 
 .why__desc {
-  max-width: 405px;
-  margin-bottom: 55px;
+  max-width: rem(405px);
+  margin-bottom: rem(55px);
+
+  @include tablets {
+    margin-bottom: rem(30px);
+  }
+
 }
 
 .why__title {
-  font-size: 48px;
+  font-size: rem(48px);
   font-weight: bold;
   color: $black;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: rem(25px);
+
+  @include tablets {
+    margin-bottom: rem(23px);
+  }
 }
 
 .why__list {
   display: flex;
   justify-content: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
+
 }
 
 .why__item {
@@ -44,48 +62,62 @@
   flex-direction: column;
   align-items: center;
   
-  max-width: 275px;
-  margin-right: 72px;
-
+  max-width: rem(275px);
+  margin-right: rem(72px);
+  
   &:last-child {
-    margin-right: 0px;
+    margin-right: rem(0px);
   }
 
-  // &::after {
-  //   content: url('../../img/why/icons/circle.png');
-  //   display: inline-block;
-  //   vertical-align: middle;
-  //   width: 67px;
-  //   height: 21px;
-  //   margin-right: 6px;
-  //   background-image: url('../../img/why/icons/circle.png');
-  //   background-repeat: no-repeat;
-  //   background-size: contain;
-  //   background-position: center center ;
-  // }
+  @include tablets {
+    margin-right: rem(0px);
+    margin-bottom: rem(27px);
+    max-width: rem(445px);
+    
+    &:last-child {
+      margin-bottom: rem(0px);
+    }
+  }
+
+
+  @include phones {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+  }
+  
   &::after {
     content: url('../../img/why/icons/circle.png');
     position: absolute;
     top: 20%;
     right: -27%;
+
+    @include tablets {
+      content: none;
+    }
+
   }
   
   &:last-child::after {
     content: none;
   }
 
-
 }
 
 .why__icon {
-  width: 125px;
-  height: 125px;
+  width: rem(125px);
+  height: rem(125px);
   background-color: $grey;
   border-radius: 50%;
-  margin-bottom: 35px;
+  margin-bottom: rem(35px);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include tablets {
+    margin-bottom: rem(25px);
+  }
+
 
   // &--man {
   //   background-image: url('../../img/why/icons/man.png');
@@ -105,18 +137,32 @@
 }
 
 .why__icon-pic {
-  max-width: 70px;
-  max-height: 69px;
+  max-width: rem(70px);
+  max-height: rem(69px);
+}
+
+
+.why__box {
+  @include phones {
+    max-width: rem(300px);
+    margin-left: rem(14px);
+  }
 }
 
 .why__item-subtitle {
-  font-size: 27px;
+  font-size: rem(27px);
   font-weight: bold;
   color: $black;
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
+
+  @include tablets {
+    margin-bottom: rem(18px);
+  }
+
+
 }
 
 .why__item-desc {
-  font-size: 18px;
+  font-size: rem(18px);
   font-weight: 300;
 }

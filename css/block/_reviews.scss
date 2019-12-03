@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
 
-  padding-top: 69px;
+  padding-top: rem(69px);
 }
 
 .reviews__container{
@@ -22,54 +22,73 @@
 }
 
 .reviews__title {
-  font-size: 48px;
+  font-size: rem(48px);
   font-weight: bold;
   color: $black;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
 }
 
 .reviews__content {
-  min-width: 940px;
-  min-height: 345px;
-  padding: 50px 180px 30px 45px;
+  min-width: rem(940px);
+  min-height: rem(345px);
+  padding: rem(50px) rem(180px) rem(30px) rem(45px);
   display: flex;
-
-
   background-image: url('../../img/reviews/bg/bg_reviews.png');
   background-repeat: no-repeat, no-repeat;
   // background-size: cover;
   background-position: center center;
 
-  margin-bottom: 27px;
+  margin-bottom: rem(27px);
+
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:0;
+
+    min-width: rem(460px);
+    min-height: rem(600px);
+    // background-size: cover;
+    background-position: center right;
+  }
+
 }
 
+.reviews__userpic {
+  // width: rem(250px);
+  // height: rem(260px);
+  // overflow: hidden;
+  // object-fit: cover;
+  // object-position: center;
+  margin-right: rem(20px);
+}
+
+
 .reviews__pic {
-  width: 250px;
-  height: 260px;
-  overflow: hidden;
-  object-fit: cover;
-  object-position: center;
-  margin-right: 20px;
+  max-width: 100%;
 } 
 
 .reviews__desc {
-max-width: 433px;
+max-width: rem(433px);
 }
 
 .reviews__subtitle {
-  font-size: 30px;
+  font-size: rem(30px);
   font-weight: 500;
   color: $brownish-grey;
-  margin-bottom: 25px;
+  margin-bottom: rem(25px);
 }
 
 .reviews__message {
-  padding-bottom: 32px;
+  padding-bottom: rem(32px);
 }
 
 .reviews__user {
-  font-size: 18px;
+  font-size: rem(18px);
   font-weight: 500;
   color: $brownish-grey;
 }
@@ -81,17 +100,17 @@ max-width: 433px;
 }
 
 .reviews__item {
-  margin-right: 12px;
+  margin-right: rem(12px);
 
   &:last-child{
-    margin-right: 0px;
+    margin-right: rem(0px);
   }
 
 }
 
 .reviews__avatar{
-  width: 67px;
-  height: 67px;
+  width: rem(67px);
+  height: rem(67px);
   border-radius: 50%;
   object-fit: none;
   object-position: center;
@@ -101,10 +120,10 @@ max-width: 433px;
 }
 
   &--two {
-    object-position: center -12px;
+    object-position: center rem(-12px);
   }
   &--three {
-    object-position: -104px -43px;
+    object-position: rem(-104px) rem(-43px);
   }
 
 }
