@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
 
-  padding-top: rem(69px);
+  // padding-top: rem(69px);
 }
 
 .reviews__container{
@@ -27,6 +27,17 @@
   color: $black;
   text-transform: uppercase;
   margin-bottom: rem(40px);
+
+
+
+  @include tablets {
+    margin-bottom: rem(64px);
+  }
+
+  @include phones {
+    font-size: rem(40px);
+    margin-bottom: rem(64px);
+  }
 }
 
 .reviews__content {
@@ -52,8 +63,15 @@
 
     min-width: rem(460px);
     min-height: rem(600px);
-    // background-size: cover;
-    background-position: center right;
+
+    background-image: url('../../img/reviews/bg/bg_branch.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  @include phones {
+    min-height: rem(486px);
   }
 
 }
@@ -65,6 +83,18 @@
   // object-fit: cover;
   // object-position: center;
   margin-right: rem(20px);
+
+  @include tablets {
+    margin-right: rem(0px);
+    margin-bottom: rem(28px);
+    width: rem(202px);
+  }
+
+  @include phones {
+    width: rem(121px);
+  }
+
+
 }
 
 
@@ -73,7 +103,12 @@
 } 
 
 .reviews__desc {
-max-width: rem(433px);
+  max-width: rem(433px);
+
+  @include tablets {
+  max-width: rem(401px);
+  }
+
 }
 
 .reviews__subtitle {
@@ -119,11 +154,11 @@ max-width: rem(433px);
   border: 5px solid $green;
 }
 
-  &--two {
-    object-position: center rem(-12px);
-  }
-  &--three {
-    object-position: rem(-104px) rem(-43px);
-  }
+  // &--two {
+  //   object-position: center rem(-12px);
+  // }
+  // &--three {
+  //   object-position: rem(-104px) rem(-43px);
+  // }
 
 }

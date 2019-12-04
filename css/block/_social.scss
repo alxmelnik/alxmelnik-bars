@@ -1,7 +1,9 @@
 
 .social { 
   width: 50%;
-  text-align: right;
+  // text-align: right;
+  display: flex;
+  justify-content: flex-end;
 
   @include phones {
     flex-direction: column;
@@ -21,17 +23,22 @@
   }
 } 
 
-.social__item:hover,
-.social__item--push {
-  transform: scale(1.2);
-  transition: 0.3s ease-out;
-} 
 
 .social__link {
   display: block;
-  width: rem(20px);
-  height: rem(20px);
+  max-width: rem(20px);
+  max-height: rem(20px);
+  opacity: .3;
+  
+  &:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    transition: 0.3s ease-out;
+  } 
 }
+
+
+
 // .social__link--icon--vk {
 //   background: url('../../img/icons/social/vk.png') no-repeat center center;
 // }
@@ -46,6 +53,6 @@
 // }
 
 .social__link-icon {
-  max-width: rem(20px);
-  max-height: rem(20px);
+  width: rem(20px);
+  height: rem(20px);
 }

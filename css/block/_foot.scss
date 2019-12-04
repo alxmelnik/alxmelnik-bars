@@ -17,6 +17,7 @@
 
     @include phones {
       flex-direction: column;
+      padding: rem(28px) 0 rem(46px);
     }
   }
 
@@ -26,6 +27,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: rem(19px);
     }
   }
 
@@ -34,6 +36,10 @@
     font-size: rem(21px);
     color: $black;
     text-align: left;
+
+    @include phones {
+      margin-bottom: rem(19px);
+    }
   }
 
   .foot__contact--phone{

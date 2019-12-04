@@ -22,11 +22,18 @@
   text-transform: uppercase;
   margin-bottom: rem(40px);
   text-align: center;
+  
 
   @include phones {
     font-size: rem(40px);
   }
 
+}
+
+.form {
+  @include tablets {
+    max-width: rem(460px);
+  }
 }
 
 .form__tag {
@@ -79,6 +86,7 @@
 
 .form__input {
   width: 100%;
+  height: rem(59px);
   font-size: rem(18px);
   padding: rem(17px) rem(11px);
   outline: none;
@@ -87,11 +95,21 @@
   &:focus {
     border-color: #dde3bd;
   }
+
+  @include phones {
+    height: rem(50px);
+  }
+
 }
 
 .form__input--textarea {
   height: rem(180px);
   resize: none;
+
+  @include phones {
+    height: rem(106px);
+  }
+
 }
 
 

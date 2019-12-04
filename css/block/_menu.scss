@@ -22,7 +22,11 @@
   position: absolute;
   top: 15%;
   left: 7%;
-  z-index: 10;
+  z-index: 0;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .menu-accordeon__trigger--milk {
@@ -45,11 +49,24 @@
   font-size: rem(16px);
   display: flex;
   height: 100%;
+
+  
+
 }
 
 .menu-accordeon__item {
   height: 100%;
   display: flex;
+  justify-content: flex-end;
+
+
+  @include phones {
+    &:nth-child(2), &:nth-child(3) {
+      display:none;
+    }
+  }
+
+
 }
 
 .menu-accordeon__trigger {
@@ -60,12 +77,13 @@
   background-size: cover;
 
   &--active + .menu-accordeon__content {
-    width: rem(530px);
+    width: rem(430px);
     
-    padding-top: rem(50px);
-    padding-left: rem(27px);
-    padding-right: rem(127px);
+    
     background-color: rgba(58, 61, 63, 0.93) ;
+    
+    
+
   }
 }
 
@@ -85,9 +103,12 @@
   width: 0;
   line-height: 1.5;
   overflow: hidden;
+  z-index: 10;
+
+
+  
   
   @include tablets {
-    display: none;
   }
 
 }
@@ -95,4 +116,5 @@
 .menu-accordeon__text {
   font-size: rem(16px);
   color: $white;
+  padding: rem(50px) rem(27px);
 }

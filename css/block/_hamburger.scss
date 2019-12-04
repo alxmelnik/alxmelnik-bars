@@ -1,15 +1,13 @@
 .hamburger {
-
-  @include desktop {
-    display: none;
-  }
+  width: rem(24px);
+  height: rem(24px);
+  display: none;
+ 
 
   @include tablets {
     display: block;
   }
 
-  width: rem(24px);
-  height: rem(24px);
 
 
 

@@ -5,6 +5,10 @@
   top: 30%;
   right: 10%;
 
+  @include tablets {
+    display: none;
+  }
+
 }
 
 .fixed-menu__dot {
