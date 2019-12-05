@@ -26,6 +26,7 @@
 
   @include phones {
     font-size: rem(40px);
+    margin-bottom: rem(25px);
   }
 
 }
@@ -66,6 +67,10 @@
 .form__row {
   display: flex;
   margin-bottom: rem(20px);
+
+  @include phones {
+    margin-bottom: rem(14px);
+  }
 }
 
 
@@ -77,6 +82,7 @@
   &:last-child {
     margin-right: 0;
   }
+
 }
 
 .form__label {
@@ -237,6 +243,10 @@
 
 .form__row-btn {
   margin-top: rem(42px);
+
+  @include phones{
+    margin-top: rem(25px);
+  }
 }
 
 .form__btn {

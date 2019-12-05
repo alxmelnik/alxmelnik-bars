@@ -7,12 +7,15 @@
   background-repeat: no-repeat, no-repeat;
   // background-size: cover;
   background-position: bottom left, center left;
-  padding-top: rem(60px);
-  padding-bottom: rem(110px);
+  // padding-top: rem(60px);
+  // padding-bottom: rem(110px);
   display: flex;
   align-items: center;
   justify-content: center;
 
+
+  
+  
   @include phones {
     background-image: none;
   }
@@ -72,7 +75,7 @@
   @include tablets {
     margin-right: rem(0px);
     margin-bottom: rem(27px);
-    max-width: rem(445px);
+    max-width: rem(443px);
     
     &:last-child {
       margin-bottom: rem(0px);
