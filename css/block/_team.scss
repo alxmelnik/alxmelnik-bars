@@ -18,7 +18,13 @@
     bottom: -6%;
     left: 1%;
     z-index: 20;
-    
+
+    @include phones {
+      transform: scale(0.6);
+      bottom: -8%;
+      left: -6%;
+    }
+
   }
 
 }
@@ -58,7 +64,7 @@
 
   // margin-right: rem(20px);
 
-  &:last-child  {
+  &:last-child {
     margin-right: rem(0px);
   }
 
@@ -66,8 +72,8 @@
     max-width: 46%;
     margin-bottom: rem(10px);
   }
-  
- 
+
+
 }
 
 .team__pic {
@@ -92,7 +98,7 @@
   margin-bottom: rem(13px);
   display: inline-flex;
   align-items: center;
-  
+
   &:after {
     content: "";
     display: block;
@@ -102,7 +108,7 @@
     margin-left: rem(6px);
   }
 
-} 
+}
 
 .team-accordeon__trigger--active {
   &:after {
@@ -115,7 +121,7 @@
   overflow: hidden;
 }
 
-.team-accordeon__trigger--active +.team-accordeon__content {
+.team-accordeon__trigger--active+.team-accordeon__content {
   height: 100%;
 }
 

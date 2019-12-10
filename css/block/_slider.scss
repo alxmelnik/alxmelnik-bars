@@ -1,0 +1,299 @@
+.slider {
+  background-color: $light-grey;
+
+  background-image: url('../../img/slider/bg/pattern_slider.png');
+
+  background-repeat: no-repeat;
+  // background-size: cover;
+  background-position: bottom right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:after {
+    content: url('../../img/slider/bg/blueberries.png');
+    position: absolute;
+    bottom: -9%;
+    right: 1%;
+    z-index: 20;
+
+    @include phones {
+      transform: scale(0.6);
+      right: -6%;
+    }
+
+  }
+
+}
+
+.slider__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0;
+
+  @include tablets {
+    width: 55%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+
+
+}
+
+.slider__scroll {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.slider__left {
+  width: 50%;
+  margin-right: 4%;
+
+  @include tablets {
+    width: rem(370px);
+    margin-right: 0;
+    margin-bottom: rem(28px);
+  }
+
+
+  @include phones {
+    margin-bottom: 5%;
+  }
+
+}
+
+.slider__left-photo {
+  max-width: 100%;
+}
+
+.slider__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+
+  @include tablets {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  @include tablets {
+    width: rem(385px);
+  }
+
+
+
+}
+
+.slider__hover {
+  display: flex;
+  position: absolute;
+  top: rem(-127px);
+
+  @include tablets {
+    flex-direction: row-reverse;
+    top: -175%;
+    right: -35%;
+  }
+
+  @include phones {
+    top: -136%;
+    right: 0%;
+  }
+
+}
+
+.slider__btn {
+  width: rem(90px);
+  height: rem(90px);
+  background-color: #00accf;
+  border-radius: rem(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: rem(37px);
+
+}
+
+
+
+.slider__btn-pic {
+  fill: $white;
+  width: rem(51px);
+  height: rem(51px);
+}
+
+.slider__btn-desc {
+  font-size: rem(14px);
+  font-weight: 900;
+  font-style: italic;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.slider__hover-block {
+  min-width: rem(270px);
+  background-color: $white;
+  border: 1px solid transparent;
+  border-radius: rem(5px);
+  padding: rem(26px) rem(20px) rem(26px) rem(31px);
+
+  opacity: 0;
+  z-index: 30;
+}
+
+.slider__btn:hover ~.slider__hover-block {
+  opacity: 0.95;
+  transition: opacity 0.5s;
+
+
+}
+
+.hover-block__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.hover-block__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(16px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.hover-block__icon {
+  max-width: rem(35px);
+  max-height: rem(35px);
+  margin-right: rem(24px);
+}
+
+.hover-block__desc {
+  font-size: rem(16px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: #333333;
+
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.slider__title {
+  font-size: rem(36px);
+  font-weight: bold;
+  color: $black;
+  text-transform: uppercase;
+  margin-bottom: rem(22px);
+
+  @include tablets {
+    font-size: rem(30px);
+  }
+
+
+}
+
+.slider__desc {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+
+}
+
+.slider__text {
+  max-width: rem(340px);
+  font-size: rem(18px);
+  color: $brownish-grey;
+  padding-bottom: 7%;
+
+  @include tablets {
+    max-width: rem(560px);
+    text-align: center;
+    padding-bottom: 5%;
+  }
+
+  @include phones {
+    max-width: rem(385px);
+    text-align: center;
+    padding-bottom: 3%;
+  }
+
+}
+
+.slider__list {
+  display: flex;
+  margin-bottom: 8%;
+
+  @include tablets {
+    justify-content: center;
+    margin-bottom: 6%;
+  }
+
+  @include phones {
+    margin-bottom: 5%;
+  }
+
+}
+
+.slider__item {
+  display: flex;
+  flex-direction: column;
+  font-size: rem(18px);
+  color: $black;
+  margin-right: rem(55px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+
+  @include tablets {
+    margin-right: rem(75px);
+  }
+
+}
+
+.slider__item-subtitle {
+  margin-bottom: rem(5px);
+}
+
+.slider__item-number {
+  font-weight: bold;
+}
+
+.slider__order {
+  display: flex;
+  align-items: center;
+  
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.slider__order-price {
+  font-size: rem(60px);
+  font-weight: 300;
+  line-height: 1;
+  color: $black;
+  margin-right: rem(31px);
+}
+
+.btn__link--green {
+  color: $white;
+  background-color: $green;
+}
