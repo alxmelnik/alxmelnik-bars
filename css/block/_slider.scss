@@ -154,12 +154,20 @@
   z-index: 30;
 }
 
-.slider__btn:hover ~.slider__hover-block {
+.slider__hover:hover .slider__hover-block {
   opacity: 0.95;
   transition: opacity 0.5s;
-
-
 }
+
+
+
+// .slider__btn:hover ~.slider__hover-block {
+//   opacity: 0.95;
+//   transition: opacity 0.5s;
+// }
+
+
+
 
 .hover-block__list {
   display: flex;
