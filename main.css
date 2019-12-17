@@ -878,7 +878,24 @@ ul li {
   margin: 0 0; }
   @media screen and (max-width: 768px) {
     .slider__container {
-      width: 55%;
+      width: 55%; } }
+  @media screen and (max-width: 480px) {
+    .slider__container {
+      width: 100%; } }
+
+.slider__box-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0; }
+  @media screen and (max-width: 768px) {
+    .slider__box-item {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -886,9 +903,6 @@ ul li {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; } }
-  @media screen and (max-width: 480px) {
-    .slider__container {
-      width: 100%; } }
 
 .slider__scroll {
   display: -webkit-box;
@@ -952,7 +966,7 @@ ul li {
       right: -35%; } }
   @media screen and (max-width: 480px) {
     .slider__hover {
-      top: -136%;
+      top: -118%;
       right: 0%; } }
 
 .slider__btn {
@@ -1314,10 +1328,6 @@ ul li {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
-  @media screen and (max-width: 480px) {
-    .menu-accordeon__item:nth-child(2), .menu-accordeon__item:nth-child(3) {
-      width: 0;
-      overflow: hidden; } }
 
 .menu-accordeon__trigger {
   cursor: pointer;
@@ -1325,12 +1335,13 @@ ul li {
   min-width: 6.25rem;
   position: relative;
   background-size: cover; }
-  .menu-accordeon__trigger--active + .menu-accordeon__content {
-    width: 40vw;
-    background-color: rgba(58, 61, 63, 0.93); }
-    @media screen and (max-width: 480px) {
-      .menu-accordeon__trigger--active + .menu-accordeon__content {
-        width: 80vw; } }
+
+.menu-accordeon__trigger--active ~ .menu-accordeon__content {
+  width: 40vw;
+  background-color: rgba(58, 61, 63, 0.93); }
+  @media screen and (max-width: 480px) {
+    .menu-accordeon__trigger--active ~ .menu-accordeon__content {
+      width: auto; } }
 
 .menu-accordeon__trigger-text {
   display: block;

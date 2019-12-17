@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Натуральные Батончики</title>
   <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="./css/jquery.bxslider.css">
+
 </head>
 
 
@@ -47,7 +49,7 @@
           </Address>
 
           <div class="hamburger">
-              <img src="./img/head/icons/hamburger.png" alt="Меню" class="hamburger__link--pic">
+            <img src="./img/head/icons/hamburger.png" alt="Меню" class="hamburger__link--pic">
           </div>
 
         </div>
@@ -62,7 +64,7 @@
                 <h1 class="promo__title">натуральные шоколадные батончики</h1>
                 <p class="promo__text">Наши батончики идеально подходят для тех, кто следит за своим здоровьем </p>
                 <div class="btn">
-                  <a href="#" class="btn__link">Заказать</a>
+                  <a href="#delivery" class="btn__link">Заказать</a>
                 </div>
               </div>
             </div>
@@ -178,125 +180,238 @@
     <!-- Slider -->
     <section class="section slider" id="slider">
 
-      <div class="slider__scroll">
+      <div class="slider__scroll " id="left">
         <a href="#" class="scroll__link">
           <img src="./img/slider/arrow-scroll-left.png" alt="Стрелка влево" class="scroll__icon">
         </a>
       </div>
 
+
       <div class="slider__container container">
-        <div class="slider__left">
-          <img src="./img/slider/bars_slider.png" alt="Батончики" class="slider__left-photo">
-        </div>
 
-        <div class="slider__right">
-          <div class="slider__hover">
-            <div class="slider__btn">
-              <svg class="slider__btn-pic" >
-                <use xlink:href="./img/icons/icons_svg/sprite.svg#chocolate-bar"></use>
-              </svg>
-              <span class="slider__btn-desc">Состав</span>
-            </div>
-            <div class="slider__hover-block">
-              <ul class="hover-block__list">
-                <li class="hover-block__item">
-                  <svg class="hover-block__icon">
-                    <use xlink:href="./img/icons/icons_svg/sprite.svg#oat"></use>
-                  </svg>
-                  <div class="hover-block__desc">
-                    <span class="hover-block__text">Овес</span>
-                    <span class="hover-block__text">25 г</span>
-                  </div>
-                </li>
-                <li class="hover-block__item">
-                  <svg class="hover-block__icon">
-                    <use xlink:href="./img/icons/icons_svg/sprite.svg#seaweed"></use>
-                  </svg>
-                  <div class="hover-block__desc">
-                    <span class="hover-block__text">Мор. водоросли</span>
-                    <span class="hover-block__text">15 г</span>
-                  </div>
-                </li>
-                <li class="hover-block__item">
-                  <svg class="hover-block__icon">
-                    <use xlink:href="./img/icons/icons_svg/sprite.svg#almond2"></use>
-                  </svg>
-                  <div class="hover-block__desc">
-                    <span class="hover-block__text">Миндаль</span>
-                    <span class="hover-block__text">20 г</span>
-                  </div>
-                </li>
-                <li class="hover-block__item">
-                  <svg class="hover-block__icon">
-                    <use xlink:href="./img/icons/icons_svg/sprite.svg#washing-powder"></use>
-                  </svg>
-                  <div class="hover-block__desc">
-                    <span class="hover-block__text">Сухое молоко</span>
-                    <span class="hover-block__text">10 г</span>
-                  </div>
-                </li>
-                <li class="hover-block__item">
-                  <svg class="hover-block__icon">
-                    <use xlink:href="./img/icons/icons_svg/sprite.svg#seeds"></use>
-                  </svg>
-                  <div class="hover-block__desc">
-                    <span class="hover-block__text">Тыкв. семечки</span>
-                    <span class="hover-block__text">20 г</span>
-                  </div>
-                </li>
-                <li class="hover-block__item">
-                  <svg class="hover-block__icon">
-                    <use xlink:href="./img/icons/icons_svg/sprite.svg#apitherapy"></use>
-                  </svg>
-                  <div class="hover-block__desc">
-                    <span class="hover-block__text">Зам. сахара</span>
-                    <span class="hover-block__text">4 г</span>
-                  </div>
-                </li>
-                <li class="hover-block__item">
-                  <svg class="hover-block__icon">
-                    <use xlink:href="./img/icons/icons_svg/sprite.svg#beans"></use>
-                  </svg>
-                  <div class="hover-block__desc">
-                    <span class="hover-block__text">Какао бобы</span>
-                    <span class="hover-block__text">4 г</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="slider__box">
 
-          <h3 class="slider__title">Батончик “Морские водоросли”</h3>
-
-          <div class="slider__desc">
-            <div class="slider__text">
-              Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое
-              молоко, заменитель сахара и какао бобы.
+          <div class="slider__box-item">
+            <div class="slider__left">
+              <img src="./img/slider/bars_slider.png" alt="Батончики" class="slider__left-photo">
             </div>
 
-            <ul class="slider__list">
-              <li class="slider__item">
-                <span class="slider__item-subtitle">Калорийность</span>
-                <span class="slider__item-number">120 ккал</span>
-              </li>
-              <li class="slider__item">
-                <span class="slider__item-subtitle">Вес</span>
-                <span class="slider__item-number">98 грамм</span>
-              </li>
-            </ul>
+            <div class="slider__right">
+              <div class="slider__hover">
+                <div class="slider__btn">
+                  <svg class="slider__btn-pic">
+                    <use xlink:href="./img/icons/icons_svg/sprite.svg#chocolate-bar"></use>
+                  </svg>
+                  <span class="slider__btn-desc">Состав</span>
+                </div>
+                <div class="slider__hover-block">
+                  <ul class="hover-block__list">
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#oat"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Овес</span>
+                        <span class="hover-block__text">25 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#seaweed"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Мор. водоросли</span>
+                        <span class="hover-block__text">15 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#almond2"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Миндаль</span>
+                        <span class="hover-block__text">20 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#washing-powder"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Сухое молоко</span>
+                        <span class="hover-block__text">10 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#seeds"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Тыкв. семечки</span>
+                        <span class="hover-block__text">20 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#apitherapy"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Зам. сахара</span>
+                        <span class="hover-block__text">4 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#beans"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Какао бобы</span>
+                        <span class="hover-block__text">4 г</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <div class="slider__order">
-              <div class="slider__order-price">140 ₽</div>
-              <div class="btn">
-                <a href="#" class="btn__link btn__link--green">Заказать</a>
+              <h3 class="slider__title">Батончик “Морские водоросли”</h3>
+
+              <div class="slider__desc">
+                <div class="slider__text">
+                  Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое
+                  молоко, заменитель сахара и какао бобы.
+                </div>
+
+                <ul class="slider__list">
+                  <li class="slider__item">
+                    <span class="slider__item-subtitle">Калорийность</span>
+                    <span class="slider__item-number">120 ккал</span>
+                  </li>
+                  <li class="slider__item">
+                    <span class="slider__item-subtitle">Вес</span>
+                    <span class="slider__item-number">98 грамм</span>
+                  </li>
+                </ul>
+
+                <div class="slider__order">
+                  <div class="slider__order-price">140 Р</div>
+                  <div class="btn">
+                    <a href="#delivery" class="btn__link btn__link--green">Заказать</a>
+                  </div>
+                </div>
+
               </div>
             </div>
-
           </div>
+
+          <div class="slider__box-item">
+            <div class="slider__left">
+              <img src="./img/slider/bars_slider_two.png" alt="Батончики" class="slider__left-photo">
+            </div>
+
+            <div class="slider__right">
+              <div class="slider__hover">
+                <div class="slider__btn">
+                  <svg class="slider__btn-pic">
+                    <use xlink:href="./img/icons/icons_svg/sprite.svg#chocolate-bar"></use>
+                  </svg>
+                  <span class="slider__btn-desc">Состав</span>
+                </div>
+                <div class="slider__hover-block">
+                  <ul class="hover-block__list">
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#grape"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Виноград</span>
+                        <span class="hover-block__text">25 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#nut"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Грецкий орех</span>
+                        <span class="hover-block__text">32 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#almond2"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Кунжутное семя</span>
+                        <span class="hover-block__text">20 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#washing-powder"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Сухое молоко</span>
+                        <span class="hover-block__text">10 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#apitherapy"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Зам. сахара</span>
+                        <span class="hover-block__text">4 г</span>
+                      </div>
+                    </li>
+                    <li class="hover-block__item">
+                      <svg class="hover-block__icon">
+                        <use xlink:href="./img/icons/icons_svg/sprite.svg#beans"></use>
+                      </svg>
+                      <div class="hover-block__desc">
+                        <span class="hover-block__text">Какао бобы</span>
+                        <span class="hover-block__text">4 г</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <h3 class="slider__title">Батончик “Гранола Виноград”</h3>
+
+              <div class="slider__desc">
+                <div class="slider__text">
+                  Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят:
+                  сухое молоко, заменитель сахара и какао бобы.
+                </div>
+
+                <ul class="slider__list">
+                  <li class="slider__item">
+                    <span class="slider__item-subtitle">Калорийность</span>
+                    <span class="slider__item-number">110 ккал</span>
+                  </li>
+                  <li class="slider__item">
+                    <span class="slider__item-subtitle">Вес</span>
+                    <span class="slider__item-number">95 грамм</span>
+                  </li>
+                </ul>
+
+                <div class="slider__order">
+                  <div class="slider__order-price">140 Р</div>
+                  <div class="btn">
+                    <a href="#delivery" class="btn__link btn__link--green">Заказать</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
+
       </div>
 
-      <div class="slider__scroll">
+
+      <div class="slider__scroll" id="right">
         <a href="#" class="scroll__link">
           <img src="./img/slider/arrow-scroll-right.png" alt="Стрелка вправо" class="scroll__icon">
         </a>
@@ -313,7 +428,7 @@
             <li class="team-accordeon__item">
               <img src="./img/team/boris.png" alt="Борис Федорович" class="team__pic">
               <div class="team__box">
-                <h3 class="team-accordeon__trigger">Борис Федорович</h3>
+                <h3 class="team-accordeon__trigger ">Борис Федорович</h3>
                 <div class="team-accordeon__content">
                   <h4 class="team-accordeon__profession">Главный технолог</h4>
                   <div class="team-accordeon__info">
@@ -341,7 +456,7 @@
               <img src="./img/team/kirill.png" alt="Кирилл Матросов" class="team__pic">
 
               <div class="team__box">
-                <h3 class="team-accordeon__trigger team-accordeon__trigger--active">Кирилл Матросов</h3>
+                <h3 class="team-accordeon__trigger ">Кирилл Матросов</h3>
                 <div class="team-accordeon__content">
                   <h4 class="team-accordeon__profession">Оператор</h4>
                   <div class="team-accordeon__info">
@@ -353,8 +468,8 @@
             <li class="team-accordeon__item">
               <img src="./img/team/mila.png" alt="Мила Рыжкова" class="team__pic">
 
-              <div class="team__box">
-                <h3 class="team-accordeon__trigger">Мила Рыжкова</h3>
+              <div class="team__box ">
+                <h3 class="team-accordeon__trigger ">Мила Рыжкова</h3>
                 <div class="team-accordeon__content">
                   <h4 class="team-accordeon__profession">PR, маркетинг</h4>
                   <div class="team-accordeon__info">
@@ -376,8 +491,8 @@
       <h2 class="menu__title">Меню</h2>
       <div class="menu-accordeon">
         <ul class="menu-accordeon__list">
-          <li class="menu-accordeon__item">
-            <span class="menu-accordeon__trigger menu-accordeon__trigger--milk menu-accordeon__trigger--active">
+          <li class="menu-accordeon__item ">
+            <span class="menu-accordeon__trigger menu-accordeon__trigger--milk ">
               <span class="menu-accordeon__trigger-text">Батончики с молоком</span>
             </span>
             <div class="menu-accordeon__content">
@@ -674,8 +789,13 @@
 
   </div>
 
-
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script defer src="./js/main.js"></script>
+
+
+
+  <script defer src="./js/jquery.bxslider.js"></script>
+  <script defer src="./js/slider.js"></script>
 
 </body>
 

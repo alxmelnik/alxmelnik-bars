@@ -60,14 +60,14 @@
   justify-content: flex-end;
 
 
-  @include phones {
-    &:nth-child(2), &:nth-child(3) 
-    {
-      // display:none;
-      width: 0;
-      overflow: hidden;
-    }
-  }
+  // @include phones {
+  //   &:nth-child(2), &:nth-child(3) 
+  //   {
+  //     // display:none;
+  //     width: 0;
+  //     overflow: hidden;
+  //   }
+  // }
 
 
 }
@@ -79,15 +79,16 @@
   position: relative;
   background-size: cover;
 
-  &--active + .menu-accordeon__content {
-    // width: rem(430px);
-    width: 40vw;
-    background-color: rgba(58, 61, 63, 0.93) ;
+}
 
-    @include phones {
-      width: 80vw;
-    }
+.menu-accordeon__trigger--active ~ .menu-accordeon__content {
+  // width: rem(430px);
+  width: 40vw;
+  background-color: rgba(58, 61, 63, 0.93) ;
 
+  @include phones {
+    // width: 80vw;
+    width: auto;
   }
 
 }

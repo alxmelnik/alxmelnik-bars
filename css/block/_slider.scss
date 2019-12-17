@@ -35,14 +35,37 @@
 
   @include tablets {
     width: 55%;
-    flex-direction: column;
-    justify-content: center;
   }
 
   @include phones {
     width: 100%;
   }
+}
 
+
+// .slider__box {
+//   // display: flex;
+//   // justify-content: center;
+//   // align-items: center;
+  
+// }
+
+
+.slider__box-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0;
+
+  @include tablets {
+    // width: 55%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include phones {
+    // width: 100%;
+  }
 
 }
 
@@ -52,6 +75,7 @@
   height: 100%;
   cursor: pointer;
 }
+
 
 .slider__left {
   width: 50%;
@@ -107,7 +131,7 @@
   }
 
   @include phones {
-    top: -136%;
+    top: -118%;
     right: 0%;
   }
 
