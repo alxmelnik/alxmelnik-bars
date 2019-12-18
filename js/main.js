@@ -99,7 +99,7 @@ menuAccordeon.forEach(function (section) {
 
     } else {
 
-      menuAccordeon.forEach(function (section){
+      menuAccordeon.forEach(function (section) {
         section.classList.remove(activeClassMenu)
       })
       section.classList.add(activeClassMenu)
@@ -111,48 +111,89 @@ menuAccordeon.forEach(function (section) {
 })
 
 
+// Form
+
+const openModal = document.querySelector('.modal');
+const closeModal = document.querySelector('.btn__link--modal');
 
 
+openModal.addEventListener('click', function () {
+  openModal.style.display = 'flex';
+})
 
 
+closeModal.addEventListener('click', function (e) {
+  debugger;
+  e.preventDefault();
+  openModal.style.display = 'none';
+}); 
 
 
-// let closeTeamActive = function () {
+const myForm = document.querySelector('.form__tag');
+const sendButton = document.querySelector('.form__btn');
+
+sendButton.addEventListener('click', event => {
+  event.preventDefault();
 
 
-// }
+  if (validateForm(myForm)) {
 
-// teamAccordeon.addEventListener('click', function(ev){
-//   if (ev.target === document.querySelector('.team-accordeon__trigger--active')) {
-
-//     ev.classList.remove('.team-accordeon__trigger--active')
-//   }
-// }) 
-
+    var formData = new FormData();
+    formData.append("name", myForm.elements.name.value);
+    formData.append("phone", myForm.elements.phone.value);
+    formData.append("comment", myForm.elements.comment.value);
+    formData.append("to", "mail@mail.com");
 
 
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);
+    xhr.addEventListener('load', ()=> {
+      if (xhr.response.status) {
+        console.log ("Все ок!");
 
-// // Рабочий
-// teamAccordeon.forEach(function (section) {
+        openModal.click();
 
-//   section.addEventListener('click', function (e) {
+      }
 
-//     teamAccordeon.forEach(function (section) {
-//       section.classList.remove('team-accordeon__trigger--active')
-//     })
+    });
 
-//     e.target.closest('.team-accordeon__trigger').classList.add('team-accordeon__trigger--active');
+  }
 
-//   })
-
-// })
+});
 
 
-// Рабочий
-// for (let i=0; i < teamAccordeon.length; i++){
-//   teamAccordeon[i].addEventListener('click', function() {
+function validateForm(form) {
+  let valid = true;
 
-//     this.classList.toggle('team-accordeon__trigger--active');
-//     // console.log(this.classList);
-//   })
-// }
+  if (!validateField(form.elements.name)) {
+    valid = false;
+  }
+
+  if (!validateField(form.elements.phone)) {
+    valid = false;
+  }
+
+  if (!validateField(form.elements.comment)) {
+    valid = false;
+  }
+
+  return valid;
+}
+
+
+function validateField(field) {
+  if (!field.checkValidity()) {
+    field.nextElementSibling.textContent = field.validationMessage;
+    return false;
+
+  } else {
+
+    field.nextElementSibling.textContent = " ";
+    return true;
+  }
+}
+
+
+//=============================

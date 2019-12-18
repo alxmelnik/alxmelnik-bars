@@ -603,11 +603,13 @@
               <div class="form__row form__row--double">
                 <label class="form__block">
                   <div class="form__label">Имя</div>
-                  <input type="text" class="form__input" name="name" placeholder="">
+                  <input type="text" class="form__input" name="name" placeholder="" required>
+                  <div class="error"></div>
                 </label>
                 <label class="form__block">
                   <div class="form__label">Телефон</div>
-                  <input type="text" class="form__input phone__mask" name="phone" placeholder="89022348912">
+                  <input type="text" class="form__input phone__mask" name="phone" placeholder="" required>
+                  <div class="error"></div>
                 </label>
               </div>
 
@@ -615,6 +617,7 @@
                 <label class="form__block">
                   <div class="form__label">Улица</div>
                   <input type="text" class="form__input" name="street" placeholder="">
+                  
                 </label>
               </div>
 
@@ -622,11 +625,11 @@
               <div class="form__row form__row--quatro">
                 <label class="form__block">
                   <div class="form__label">Дом</div>
-                  <input type="text" class="form__input" name="home" placeholder="">
+                  <input type="text" class="form__input" name="home" placeholder="" >
                 </label>
                 <label class="form__block">
                   <div class="form__label">Корпус</div>
-                  <input type="text" class="form__input" name="part" placeholder="">
+                  <input type="text" class="form__input" name="part" placeholder="" >
                 </label>
                 <label class="form__block">
                   <div class="form__label">Квартира</div>
@@ -634,7 +637,7 @@
                 </label>
                 <label class="form__block">
                   <div class="form__label">Этаж</div>
-                  <input type="text" class="form__input" name="floor" placeholder="">
+                  <input type="text" class="form__input" name="floor" placeholder="" >
                 </label>
               </div>
             </div>
@@ -643,18 +646,19 @@
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__label">Комментарий</div>
-                  <textarea class="form__input form__input--textarea" name="comment"></textarea>
+                  <textarea class="form__input form__input--textarea" name="comment" required ></textarea>
+                  <div class="error"></div>
                 </label>
               </div>
 
               <div class="form__buttons">
                 <div class="form__row">
                   <label class="form__radio">
-                    <input class="form__radio-elem" type="radio" checked name="payment">
+                    <input class="form__radio-elem" type="radio" checked name="payment" value="change_coins">
                     <div class="form__radio-title">Потребуется сдача</div>
                   </label>
                   <label class="form__radio">
-                    <input class="form__radio-elem" type="radio" checked name="payment">
+                    <input class="form__radio-elem" type="radio" checked name="payment" value="credit_card">
                     <div class="form__radio-title">Оплата по карте</div>
                   </label>
                 </div>
@@ -667,7 +671,10 @@
                 </div>
 
                 <div class="form__row form__row-btn">
-                  <input type="submit" class="form__btn" value="Заказать">
+                  <button type="button" class="form__btn" value="Заказать">
+                    Заказать
+                  </button>
+                  <!-- <input type="button" class="form__btn" value="Заказать"> -->
                   <input type="reset" class=" form__btn-reset" value="Очистить">
                 </div>
 
@@ -676,6 +683,25 @@
           </form>
         </div>
       </div>
+
+      <div class="modal modal__send">
+        <div class="modal__window">
+          <div class="modal__text">Сообщение отправлено</div>
+          <div class="btn">
+            <a href="#" class="btn__link btn__link--green btn__link--modal">Закрыть</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal modal__nosend">
+        <div class="modal__window">
+          <div class="modal__text">Сообщение не отправлено</div>
+          <div class="btn">
+            <a href="#" class="btn__link btn__link--green btn__link--modal">Закрыть</a>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- Location -->

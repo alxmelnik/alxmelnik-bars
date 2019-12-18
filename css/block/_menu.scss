@@ -79,6 +79,10 @@
   position: relative;
   background-size: cover;
 
+  @include phones {
+    min-width: rem(80px);
+  }
+
 }
 
 .menu-accordeon__trigger--active ~ .menu-accordeon__content {
@@ -103,6 +107,11 @@
   transform: rotate(-90deg);
   white-space: nowrap;
   transform-origin: 0 50%;
+
+  @include phones {
+    font-size: rem(36px);
+  }
+
 }
 
 .menu-accordeon__content {
