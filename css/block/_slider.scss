@@ -58,6 +58,9 @@
   justify-content: center;
   align-items: center;
   margin: 0 0;
+  // margin-top: rem(45px);
+
+  padding-top : rem(145px);
 
   @include tablets {
     // width: 55%;
@@ -67,6 +70,8 @@
 
   @include phones {
     // width: 100%;
+
+    // padding-top : rem(130px);
   }
 
 }
@@ -126,18 +131,19 @@
 
 
 .slider__hover {
+
   display: flex;
   position: absolute;
   top: rem(-127px);
 
   @include tablets {
     flex-direction: row-reverse;
-    top: -175%;
-    right: -35%;
+    top: -165%;
+    right: -6%;
   }
 
   @include phones {
-    top: -118%;
+    top: -145%;
     right: 0%;
   }
 

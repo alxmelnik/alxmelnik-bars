@@ -893,7 +893,8 @@ ul li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0 0; }
+  margin: 0 0;
+  padding-top: 9.0625rem; }
   @media screen and (max-width: 768px) {
     .slider__box-item {
       -webkit-box-orient: vertical;
@@ -965,11 +966,11 @@ ul li {
       -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
       flex-direction: row-reverse;
-      top: -175%;
-      right: -35%; } }
+      top: -165%;
+      right: -6%; } }
   @media screen and (max-width: 480px) {
     .slider__hover {
-      top: -118%;
+      top: -145%;
       right: 0%; } }
 
 .slider__btn {
