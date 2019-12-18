@@ -950,6 +950,9 @@ ul li {
     .slider__right {
       width: 24.0625rem; } }
 
+.slider__box-hover {
+  height: 100%; }
+
 .slider__hover {
   display: -webkit-box;
   display: -ms-flexbox;
