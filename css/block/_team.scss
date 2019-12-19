@@ -117,12 +117,14 @@
 }
 
 .team-accordeon__content {
-  height: 0;
+  // height: 0;
   overflow: hidden;
+  opacity: 0;
 }
 
 .team-accordeon__trigger--active+.team-accordeon__content {
-  height: 100%;
+  // height: 100%;
+  opacity: 1;
 }
 
 

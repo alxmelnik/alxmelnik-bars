@@ -1262,11 +1262,11 @@ ul li {
   background: url("../../img/team/btn_up.png") center center no-repeat; }
 
 .team-accordeon__content {
-  height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  opacity: 0; }
 
 .team-accordeon__trigger--active + .team-accordeon__content {
-  height: 100%; }
+  opacity: 1; }
 
 .team-accordeon__profession {
   font-size: 1.125rem;
@@ -1372,7 +1372,10 @@ ul li {
   width: 0;
   line-height: 1.5;
   overflow: hidden;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
 
 .menu-accordeon__text {
   font-size: 1rem;
@@ -1422,12 +1425,10 @@ ul li {
       margin-bottom: 4rem; } }
 
 .reviews__content {
+  display: none;
   min-width: 58.75rem;
   min-height: 21.5625rem;
   padding: 3.125rem 11.25rem 1.875rem 2.8125rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-image: url("../../img/reviews/bg/bg_reviews.png");
   background-repeat: no-repeat, no-repeat;
   background-position: center center;
@@ -1459,6 +1460,11 @@ ul li {
     .reviews__content {
       min-height: 30.375rem; } }
 
+.reviews__content--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .reviews__userpic {
   margin-right: 1.25rem; }
   @media screen and (max-width: 768px) {
@@ -1474,13 +1480,13 @@ ul li {
   max-width: 100%; }
 
 .reviews__desc {
-  max-width: 27.0625rem; }
+  max-width: 28.125rem; }
   @media screen and (max-width: 768px) {
     .reviews__desc {
       max-width: 25.0625rem; } }
 
 .reviews__subtitle {
-  font-size: 1.875rem;
+  font-size: 1.8125rem;
   font-weight: 500;
   color: #666666;
   margin-bottom: 1.5625rem; }
@@ -1505,6 +1511,15 @@ ul li {
   align-items: center; }
 
 .reviews__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-right: 0.75rem; }
   .reviews__item:last-child {
     margin-right: 0rem; }
@@ -1517,8 +1532,10 @@ ul li {
   object-fit: none;
   -o-object-position: center;
   object-position: center; }
-  .reviews__avatar--active {
-    border: 5px solid #0f5a47; }
+
+.reviews__link--active .reviews__avatar {
+  border: 5px solid #0f5a47;
+  border-radius: 50%; }
 
 .delivery {
   color: #0f5a47;

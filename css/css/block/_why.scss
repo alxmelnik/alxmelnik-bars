@@ -1,0 +1,171 @@
+.why {
+  background-color: $white;
+  color: $brownish-grey;
+  text-align: center;
+
+  background-image: url('../../img/why/bg/raspberry.png'), url('../../img/why/bg/pattern.png');
+  background-repeat: no-repeat, no-repeat;
+  // background-size: cover;
+  background-position: bottom left, center left;
+  // padding-top: rem(60px);
+  // padding-bottom: rem(110px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  
+  
+  @include phones {
+    background-image: none;
+  }
+}
+
+.why__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why__desc {
+  max-width: rem(405px);
+  margin-bottom: rem(55px);
+
+  @include tablets {
+    margin-bottom: rem(30px);
+  }
+
+}
+
+.why__title {
+  font-size: rem(48px);
+  font-weight: bold;
+  color: $black;
+  text-transform: uppercase;
+  margin-bottom: rem(25px);
+
+  @include tablets {
+    margin-bottom: rem(23px);
+  }
+}
+
+.why__list {
+  display: flex;
+  justify-content: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
+
+}
+
+.why__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  max-width: rem(275px);
+  margin-right: rem(72px);
+  
+  &:last-child {
+    margin-right: rem(0px);
+  }
+
+  @include tablets {
+    margin-right: rem(0px);
+    margin-bottom: rem(27px);
+    max-width: rem(443px);
+    
+    &:last-child {
+      margin-bottom: rem(0px);
+    }
+  }
+
+
+  @include phones {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+  }
+  
+  &::after {
+    content: url('../../img/why/icons/circle.png');
+    position: absolute;
+    top: 20%;
+    right: -27%;
+
+    @include tablets {
+      content: none;
+    }
+
+  }
+  
+  &:last-child::after {
+    content: none;
+  }
+
+}
+
+.why__icon {
+  width: rem(125px);
+  height: rem(125px);
+  background-color: $grey;
+  border-radius: 50%;
+  margin-bottom: rem(35px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    margin-bottom: rem(25px);
+  }
+
+
+  // &--man {
+  //   background-image: url('../../img/why/icons/man.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center center ;
+  // }
+  // &--smile {
+  //   background-image: url('../../img/why/icons/smile.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center center ;
+  // }
+  // &--muscle {
+  //   background-image: url('../../img/why/icons/muscle.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center center ;
+  // }
+}
+
+.why__icon-pic {
+  max-width: rem(70px);
+  max-height: rem(69px);
+}
+
+
+.why__box {
+  @include phones {
+    max-width: rem(300px);
+    margin-left: rem(14px);
+  }
+}
+
+.why__item-subtitle {
+  font-size: rem(27px);
+  font-weight: bold;
+  color: $black;
+  margin-bottom: rem(30px);
+
+  @include tablets {
+    margin-bottom: rem(18px);
+  }
+
+
+}
+
+.why__item-desc {
+  font-size: rem(18px);
+  font-weight: 300;
+}

@@ -37,6 +37,9 @@ let decreaseOpacity = function () {
 hamburger.addEventListener('click', function () {
   fullScreenMenu.style.display = 'flex';
   increaseOpacity();
+
+
+
 })
 
 closeMenu.addEventListener('click', function () {
@@ -67,6 +70,7 @@ const activeClassTeam = 'team-accordeon__trigger--active';
 teamAccordeon.forEach(function (section) {
 
   section.addEventListener('click', function () {
+    // debugger;
 
     if (section.classList.contains(activeClassTeam)) {
       section.classList.remove(activeClassTeam)
@@ -84,6 +88,31 @@ teamAccordeon.forEach(function (section) {
   })
 
 })
+
+// Reviews=========================
+
+const reviewsAccordeon = document.querySelectorAll('.reviews__content');
+const activeClassReviews = 'reviews__content--active';
+
+const reviewsAvatarAcc = document.querySelectorAll('.reviews__link')
+const activeClassAvatar = 'reviews__link--active';
+
+reviewsAvatarAcc.forEach(function (section) {
+
+  section.addEventListener('click', function (e) {
+    // debugger;
+    e.preventDefault();
+
+    reviewsAvatarAcc.forEach(function (section) {
+      section.classList.remove(activeClassAvatar)
+    })
+
+    section.classList.add(activeClassAvatar)
+
+  })
+
+})
+
 
 
 // Menu
@@ -110,23 +139,30 @@ menuAccordeon.forEach(function (section) {
 
 })
 
+// =======================================================
+
+
+
+
+
 
 // Form
 
 const openModal = document.querySelector('.modal');
+
 const closeModal = document.querySelector('.btn__link--modal');
 
 
-openModal.addEventListener('click', function () {
-  openModal.style.display = 'flex';
-})
+// openModal.addEventListener('click', function () {
+//   openModal.style.display = 'flex';
+// })
 
 
 closeModal.addEventListener('click', function (e) {
   debugger;
   e.preventDefault();
   openModal.style.display = 'none';
-}); 
+});
 
 
 const myForm = document.querySelector('.form__tag');
@@ -149,11 +185,11 @@ sendButton.addEventListener('click', event => {
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(formData);
-    xhr.addEventListener('load', ()=> {
+    xhr.addEventListener('load', () => {
       if (xhr.response.status) {
-        console.log ("Все ок!");
-
-        openModal.click();
+        console.log("Все ок!");
+        // debugger;
+        openModal.style.display = 'flex';
 
       }
 
