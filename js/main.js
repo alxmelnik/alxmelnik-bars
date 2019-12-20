@@ -34,16 +34,23 @@ let decreaseOpacity = function () {
 
 }
 
+
+function noScroll() {
+  window.scrollTo(0, 0);
+}
+
+
 hamburger.addEventListener('click', function () {
   fullScreenMenu.style.display = 'flex';
   increaseOpacity();
-
+  window.addEventListener('scroll', noScroll); 
 
 
 })
 
 closeMenu.addEventListener('click', function () {
   fullScreenMenu.style.display = 'none';
+  window.removeEventListener('scroll', noScroll);
   decreaseOpacity();
 })
 
@@ -51,6 +58,7 @@ closeMenu.addEventListener('click', function () {
 fullScreenMenu.addEventListener('click', function (event) {
   if (event.target === fullScreenMenu) {
     closeMenu.click();
+    window.removeEventListener('scroll', noScroll);
     decreaseOpacity();
   }
 })
