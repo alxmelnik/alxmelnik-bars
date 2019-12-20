@@ -1266,7 +1266,10 @@ ul li {
   opacity: 0; }
 
 .team-accordeon__trigger--active + .team-accordeon__content {
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
 
 .team-accordeon__profession {
   font-size: 1.125rem;

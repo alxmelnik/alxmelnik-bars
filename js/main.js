@@ -89,30 +89,6 @@ teamAccordeon.forEach(function (section) {
 
 })
 
-// Reviews=========================
-
-const reviewsAccordeon = document.querySelectorAll('.reviews__content');
-const activeClassReviews = 'reviews__content--active';
-
-const reviewsAvatarAcc = document.querySelectorAll('.reviews__link')
-const activeClassAvatar = 'reviews__link--active';
-
-reviewsAvatarAcc.forEach(function (section) {
-
-  section.addEventListener('click', function (e) {
-    // debugger;
-    e.preventDefault();
-
-    reviewsAvatarAcc.forEach(function (section) {
-      section.classList.remove(activeClassAvatar)
-    })
-
-    section.classList.add(activeClassAvatar)
-
-  })
-
-})
-
 
 
 // Menu
@@ -140,6 +116,59 @@ menuAccordeon.forEach(function (section) {
 })
 
 // =======================================================
+
+// Reviews=========================
+
+
+const reviewLink = document.querySelectorAll(".reviews__link");
+
+reviewLink.forEach(element =>
+  element.addEventListener("click", function (e) {
+    e.preventDefault();
+  })
+);
+
+/* Индекс слайда по умолчанию */
+var slideIndex = 1;
+showSlides(slideIndex);
+
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+function plusSlide() {
+  showSlides(slideIndex += 1);
+}
+
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+  showSlides(slideIndex -= 1);
+}
+
+/* Устанавливает текущий слайд */
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+/* Основная функция слайдера */
+function showSlides(n) {
+
+  var i;
+  var slides = document.getElementsByClassName("reviews__content");
+  var dots = document.getElementsByClassName("reviews__link");
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" reviews__link--active", "");
+  }
+  slides[slideIndex - 1].style.display = "flex";
+
+  dots[slideIndex - 1].className += " reviews__link--active";
+}
 
 
 
@@ -233,3 +262,32 @@ function validateField(field) {
 
 
 //=============================
+
+
+
+
+
+// // Reviews=========================
+
+// const reviewsAccordeon = document.querySelectorAll('.reviews__content');
+// const activeClassReviews = 'reviews__content--active';
+
+// const reviewsAvatarAcc = document.querySelectorAll('.reviews__link')
+// const activeClassAvatar = 'reviews__link--active';
+
+// reviewsAvatarAcc.forEach(function (section) {
+
+//   section.addEventListener('click', function (e) {
+//     // debugger;
+//     e.preventDefault();
+
+//     reviewsAvatarAcc.forEach(function (section) {
+//       section.classList.remove(activeClassAvatar)
+//     })
+
+//     section.classList.add(activeClassAvatar)
+
+//   })
+
+// })
+
