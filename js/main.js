@@ -100,7 +100,7 @@ teamAccordeon.forEach(function (section) {
 
 
 // Menu
-
+const closeMenuAccord = document.querySelectorAll('.menu-accordeon__close');
 const menuAccordeon = document.querySelectorAll('.menu-accordeon__trigger');
 const activeClassMenu = 'menu-accordeon__trigger--active';
 
@@ -119,9 +119,26 @@ menuAccordeon.forEach(function (section) {
 
     }
 
+
+    for (let i = 0; i < closeMenuAccord.length; i++) {
+      closeMenuAccord[i].addEventListener('click', function (c) {
+        // debugger;
+        c.preventDefault();
+    
+        if (section.classList.contains(activeClassMenu)) {
+          section.classList.remove(activeClassMenu)
+        }
+        
+      });
+      
+    }
+
+
   })
 
 })
+
+
 
 // =======================================================
 

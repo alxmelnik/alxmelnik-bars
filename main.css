@@ -1378,12 +1378,18 @@ ul li {
   z-index: 10;
   -webkit-transition: .5s;
   -o-transition: .5s;
-  transition: .5s; }
+  transition: .5s;
+  position: relative; }
 
 .menu-accordeon__text {
   font-size: 1rem;
   color: #ffffff;
   padding: 3.125rem 1.6875rem; }
+
+.menu-accordeon__close {
+  position: absolute;
+  top: 3%;
+  right: 6%; }
 
 .reviews {
   background-color: #ffffff;

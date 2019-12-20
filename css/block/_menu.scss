@@ -31,14 +31,17 @@
 
 .menu-accordeon__trigger--milk {
   background: url('../../img/menu/bg/bg_bars_milk.png') center center no-repeat;
-  
+
 }
+
 .menu-accordeon__trigger--honey {
   background: url('../../img/menu/bg/bg_bars_honey.png') center center no-repeat;
 }
+
 .menu-accordeon__trigger--wild {
   background: url('../../img/menu/bg/bg_wild_berries.png') center center no-repeat;
 }
+
 .menu-accordeon {
   display: flex;
   justify-content: flex-end;
@@ -50,7 +53,7 @@
   display: flex;
   height: 100%;
 
-  
+
 
 }
 
@@ -85,10 +88,10 @@
 
 }
 
-.menu-accordeon__trigger--active ~ .menu-accordeon__content {
+.menu-accordeon__trigger--active~.menu-accordeon__content {
   // width: rem(430px);
   width: 40vw;
-  background-color: rgba(58, 61, 63, 0.93) ;
+  background-color: rgba(58, 61, 63, 0.93);
 
   @include phones {
     // width: 80vw;
@@ -103,7 +106,7 @@
   font-weight: 500;
   position: absolute;
   bottom: 7%;
-  left:50%;
+  left: 50%;
   transform: rotate(-90deg);
   white-space: nowrap;
   transform-origin: 0 50%;
@@ -120,11 +123,18 @@
   overflow: hidden;
   z-index: 10;
   transition: .5s;
-
+  position: relative;
 }
 
 .menu-accordeon__text {
   font-size: rem(16px);
   color: $white;
   padding: rem(50px) rem(27px);
+}
+
+
+.menu-accordeon__close {
+  position: absolute;
+  top: 3%;
+  right: 6%;
 }
