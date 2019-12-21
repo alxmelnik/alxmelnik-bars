@@ -203,17 +203,14 @@ function showSlides(n) {
 // Form
 
 const openModal = document.querySelector('.modal');
+const textModal = document.querySelector('.modal__text');
 
 const closeModal = document.querySelector('.btn__link--modal');
 
 
-// openModal.addEventListener('click', function () {
-//   openModal.style.display = 'flex';
-// })
-
 
 closeModal.addEventListener('click', function (e) {
-  debugger;
+  // debugger;
   e.preventDefault();
   openModal.style.display = 'none';
 });
@@ -238,12 +235,20 @@ sendButton.addEventListener('click', event => {
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    // xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+
     xhr.send(formData);
     xhr.addEventListener('load', () => {
       if (xhr.response.status) {
         console.log("Все ок!");
         // debugger;
         openModal.style.display = 'flex';
+        
+        // window.addEventListener('scroll', noScroll); 
+      } else {
+        console.log("Не отправлено!");
+        openModal.style.display = 'flex';
+        textModal.textContent = "Сообщение не отправлено";
 
       }
 
@@ -292,7 +297,8 @@ function validateField(field) {
 
 
 
-// // Reviews=========================
+// // Reviews========================= только иконки меняет (не рабочий)
+
 
 // const reviewsAccordeon = document.querySelectorAll('.reviews__content');
 // const activeClassReviews = 'reviews__content--active';
