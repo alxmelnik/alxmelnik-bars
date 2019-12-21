@@ -365,12 +365,12 @@ $(window).on('wheel', e => {
 
   if (deltaY > 0) {
     scrollToSection('next');
-    console.log('next');
+    // console.log('next');
   }
 
   if (deltaY < 0) {
     scrollToSection('prev');
-    console.log('prev');
+    // console.log('prev');
   }
 
 
@@ -406,13 +406,15 @@ $("[data-scroll-to]").on("click", e => {
   
 });
 
+
+
 if (isMobile) {
 
   $("body").swipe( {
     //Generic swipe handler for all directions
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
       const scrollDirections = direction == 'up' ? 'next' : 'prev';
-  
+      
       scrollToSection(scrollDirections);
   
     }

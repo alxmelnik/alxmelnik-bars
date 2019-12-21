@@ -404,10 +404,8 @@ ul li {
   transition: transform 1s, -webkit-transform 1s; }
 
 .section {
-  height: 100vh; }
-  @media screen and (max-width: 768px) {
-    .section {
-      height: 100%; } }
+  height: 100vh;
+  height: 100%; }
   @media screen and (max-width: 480px) {
     .section {
       min-height: auto; } }
