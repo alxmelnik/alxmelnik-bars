@@ -19,6 +19,7 @@ let increaseOpacity = function () {
 
 }
 
+
 let decreaseOpacity = function () {
   setTimeout(function () {
     if (fullScreenMenu.style.opacity > 1) {
