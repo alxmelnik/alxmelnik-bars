@@ -505,7 +505,9 @@ function init() {
 
 
 const wrapPlayer = document.querySelector('.player__wrapper');
+
 const playVideo = document.querySelector('.player__start');
+const playVideoIcon = document.querySelector('.player__splash');
 
 const video = document.querySelector('.player__video');
 
@@ -514,18 +516,27 @@ playVideo.addEventListener('click', function () {
 
   if (wrapPlayer.classList.contains('active')) {
     wrapPlayer.classList.remove('active');
+    playVideo.classList.remove('paused');
     video.pause();
+
   } else {
-    video.play();
     wrapPlayer.classList.add('active');
+    playVideo.classList.add('paused');
+    video.play();
   }
 
 })
 
+playVideoIcon.addEventListener('click', function () {
+  playVideo.click();
+})
 
-
-
-
+video.addEventListener('click', function (event) {
+  if (event.target === video) {
+    
+    playVideo.click();
+  }
+})
 
 
 

@@ -56,14 +56,53 @@ width: 100%;
   padding: 0 3%;
 }
 
+// .player__start {
+//   content: "";
+//   display: block;
+//   width: rem(16px);
+//   height: rem(22px);
+//   background: url('../../img/how-work/img_player/Play_gray.png') no-repeat center center;
+//   border: 1px solid transparent;
+// }
+
 .player__start {
-  content: "";
-  display: block;
-  width: rem(16px);
-  height: rem(22px);
-  background: url('../../img/how-work/img_player/Play_gray.png') no-repeat center center;
-  border: 1px solid transparent;
+  width: 0;
+  height: 0;
+  border: rem(11px) solid transparent;
+  border-left-color: #626262;
+  padding: 0;
+  border-right-width: 0;
+  background: transparent;
+  outline: none;
+  position: relative;
+  
+  &.paused {
+    width: rem(11px);
+    height: rem(22px);
+    border: none;
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 5px;
+      top: 0;
+      bottom: 0;
+      background: #626262;
+    }
+    &:after {
+      right: 0;
+    }
+    &:before {
+      left: 0;
+    }
+  }
 }
+
+
+
+
+
 
 .player__playback {
   width: rem(445px);
