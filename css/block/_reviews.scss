@@ -2,17 +2,33 @@
   background-color: $white;
   color: $brownish-grey;
 
-  background-image: url('../../img/reviews/bg/berries_reviews.png'),
-    url('../../img/reviews/bg/pattern_reviews.png'),
-    url('../../img/reviews/bg/strawberry_reviews.png');
-  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-image: url('../../img/reviews/bg/strawberry_reviews.png');
+  background-repeat: no-repeat;
   // background-size: cover;
-  background-position: bottom left, bottom left, top right;
+  background-position: top right;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   // padding-top: rem(69px);
+
+  &:after {
+    content: url('../../img/reviews/bg/berries_reviews_new.png');
+    position: absolute;
+    bottom: -16%;
+    left: 0%;
+    z-index: 20;
+
+    @include phones {
+      transform: scale(0.6);
+      bottom: -23%;
+      left: -8%;
+    }
+
+  }
+
+
 }
 
 .reviews__container {

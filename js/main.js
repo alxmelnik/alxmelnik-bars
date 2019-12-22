@@ -310,17 +310,17 @@ const performTransition = sectionEq => {
 
     const position = sectionEq * -100;
 
-    if (isNaN(position)){
+    if (isNaN(position)) {
       console.error("передано не верное значение в performTransition")
     }
 
-  
+
     sections
-    .eq(sectionEq)
-    .addClass('active')
-    .siblings()
-    .removeClass('active');
-  
+      .eq(sectionEq)
+      .addClass('active')
+      .siblings()
+      .removeClass('active');
+
     display.css({
       transform: `translateY(${position}%)`
     })
@@ -329,10 +329,10 @@ const performTransition = sectionEq => {
       inScroll = false;
 
       $('.fixed-menu__item')
-      .eq(sectionEq)
-      .addClass('active')
-      .siblings()
-      .removeClass('active');
+        .eq(sectionEq)
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
 
     }, 1300);
 
@@ -345,11 +345,11 @@ const scrollToSection = direction => {
   const activeSection = sections.filter('.active');
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
-  
+
   if (direction == 'next' && nextSection.length) {
     performTransition(nextSection.index())
   }
-  
+
   if (direction == 'prev' && prevSection.length) {
     performTransition(prevSection.index())
   }
@@ -381,11 +381,11 @@ $(window).on('keydown', e => {
 
   if (tagName !== 'input' && tagName !== 'textarea') {
 
-    switch(e.keyCode) {
+    switch (e.keyCode) {
       case 38:
         scrollToSection('prev');
         break;
-  
+
       case 40:
         scrollToSection('next');
         break;
@@ -403,20 +403,20 @@ $("[data-scroll-to]").on("click", e => {
   const target = $this.attr('data-scroll-to');
 
   performTransition(target);
-  
+
 });
 
 
 
 if (isMobile) {
 
-  $("body").swipe( {
+  $("body").swipe({
     //Generic swipe handler for all directions
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
       const scrollDirections = direction == 'up' ? 'next' : 'prev';
-      
+
       scrollToSection(scrollDirections);
-  
+
     }
   });
 
@@ -424,10 +424,103 @@ if (isMobile) {
 
 
 
+// Map ============================
+
+ymaps.ready(init);
 
 
+function init() {
+  var map = new ymaps.Map('map', {
+    center: [59.94, 30.32],
+    center: [55.75, 37.59],
+    zoom: 14,
+    controls: ['zoomControl'],
+    behaviors: ['drag']
+  });
+
+  var placemark = new ymaps.Placemark([55.746, 37.581], {
+    hintContent: 'Батончики',
+    balloonContent: 'Смоленская улица, 6'
+
+  },
+
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/location/mark.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-23, -57]
+
+    });
+
+  var placemark1 = new ymaps.Placemark([55.758, 37.583], {
+    hintContent: 'Батончики',
+    balloonContent: 'Новинский бульвар, 31'
+
+  },
+
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/location/mark.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-23, -57]
+
+    });
+
+  var placemark2 = new ymaps.Placemark([55.750, 37.604], {
+    hintContent: 'Батончики',
+    balloonContent: 'улица Знаменка, 19'
+  },
+
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/location/mark.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-23, -57]
+
+    });
+
+  var placemark3 = new ymaps.Placemark([55.7579, 37.6224], {
+    hintContent: 'Батончики',
+    balloonContent: 'Театральный проезд, 2'
+  },
+
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/location/mark.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-23, -57]
+
+    });
+
+  map.geoObjects.add(placemark);
+  map.geoObjects.add(placemark1);
+  map.geoObjects.add(placemark2);
+  map.geoObjects.add(placemark3);
+}
+
+// ==============
 
 
+// Player
+
+
+const wrapPlayer = document.querySelector('.player__wrapper');
+const playVideo = document.querySelector('.player__start');
+
+const video = document.querySelector('.player__video');
+
+
+playVideo.addEventListener('click', function () {
+
+  if (wrapPlayer.classList.contains('active')) {
+    wrapPlayer.classList.remove('active');
+    video.pause();
+  } else {
+    video.play();
+    wrapPlayer.classList.add('active');
+  }
+
+})
 
 
 
