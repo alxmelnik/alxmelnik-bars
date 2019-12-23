@@ -511,6 +511,8 @@ const playVideoIcon = document.querySelector('.player__splash');
 
 const video = document.querySelector('.player__video');
 
+const volume = document.querySelector('.player__volumeback-level');
+
 playVideo.addEventListener('click', function () {
   if (wrapPlayer.classList.contains('active')) {
     wrapPlayer.classList.remove('active');
@@ -540,43 +542,21 @@ playVideo.addEventListener('click', function () {
   }, 1000);
 
 
-
-  $(".player__playback").on("click", e => {
-    const bar = $(e.currentTarget);
-    const newButtonPosition = e.pageX - bar.offset().left;
-    const buttonPosPercent = (newButtonPosition / bar.width()) * 100;
-    const newPlayerTimeSec = (video.duration / 100) * buttonPosPercent;
-
-
-    $(".player__playback-button").css({
-      left: `${buttonPosPercent}%`
-    });
-
-    video.seeked(newPlayerTimeSec);
-
-  });
-
-
-
 })
 
 
+$(".player__playback").on("click", e => {
+  const bar = $(e.currentTarget);
+  const newButtonPosition = e.pageX - bar.offset().left;
+  const buttonPosPercent = (newButtonPosition / bar.width()) * 100;
+  const newPlayerTimeSec = (video.duration / 100) * buttonPosPercent;
 
+  $(".player__playback-button").css({
+    left: `${buttonPosPercent}%`
+  });
 
-
-
-
-// $(".player__playback").on("click", e => {
-//   const bar = $(e.currentTarget);
-//   const newButtonPosition = e.pageX - bar.offset().left;
-//   const buttonPosPercent = (newButtonPosition / bar.width()) * 100;
-//   const newPlayerTimeSec = (durationSec / 100) * buttonPosPercent;
-
-//   $(".player__playback-button").css({
-//     left: `${buttonPosPercent}%`
-//   });
-
-// });
+  video.currentTime = newPlayerTimeSec;
+});
 
 
 
@@ -596,19 +576,27 @@ video.addEventListener('click', function (event) {
 
 
 
+function changeVolume() {
+  video.volume = volume.value / 100;
+}
 
-// $(".player__playback").on("click", e => {
-//   const bar = $(e.currentTarget);
-//   const newButtonPosition = e.pageX - bar.offset().left;
-//   const buttonPosPercent = (newButtonPosition / bar.width()) * 100;
-//   const newPlayerTimeSec = (durationSec / 100) * buttonPosPercent;
 
-//   $(".player__playback-button").css({
-//     left: `${buttonPosPercent}%`
-//   });
+const muteSound = document.querySelector('.player__volume');
 
-//   player.seekTo(newPlayerTimeSec);
-// });
+
+muteSound.addEventListener('click', function (event) {
+  if (video.volume ) {
+    volume.value = 0;
+    video.volume = 0;
+  }
+})
+
+
+
+
+
+
+
 
 
 

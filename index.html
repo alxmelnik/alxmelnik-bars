@@ -659,7 +659,7 @@
         </div>
       </section>
 
-       <!-- How we work -->
+      <!-- How we work -->
       <section class="section how-work" id="how-work">
         <div class="how-work__container container">
           <h2 class="how-work__title">Как мы работаем</h2>
@@ -667,7 +667,7 @@
           <div class="player">
             <div class="player__wrapper ">
               <div class="yt-player" id="yt-player">
-                <video class="player__video" src="./img/how-work/videoplayback.mp4" ></video>
+                <video class="player__video" src="./img/how-work/videoplayback.mp4"></video>
               </div>
               <div class="player__splash"></div>
             </div>
@@ -682,7 +682,9 @@
               <button class="player__volume"></button>
 
               <div class="player__volumeback">
-                <button class="player__volumeback-button"></button>
+                <!-- <button class="player__volumeback-button">
+                </button> -->
+                <input class="player__volumeback-level" type="range" onMouseMove="changeVolume()" id="volume" value="50" min=0 max=100>
               </div>
 
             </div>
@@ -804,7 +806,7 @@
 
       <!-- Location -->
       <section class="section location" id="location">
-        <div class="map" id="map" >
+        <div class="map" id="map">
         </div>
 
         <footer class="foot">
@@ -939,7 +941,8 @@
 
   <script defer src="./js/jquery.bxslider.js"></script>
   <script defer src="./js/slider.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=8f19da60-5b32-497e-929f-23f5a191f854&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=8f19da60-5b32-497e-929f-23f5a191f854&lang=ru_RU"
+    type="text/javascript"></script>
 
 
 </body>

@@ -1755,6 +1755,9 @@ ul li {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
+    @media screen and (max-width: 768px) {
+      .player__playback:before {
+        height: 0.125rem; } }
   @media screen and (max-width: 768px) {
     .player__playback {
       width: 24.875rem; } }
@@ -1765,6 +1768,7 @@ ul li {
 .player__playback-button {
   min-width: 0.8125rem;
   min-height: 0.8125rem;
+  cursor: pointer;
   background-color: #626262;
   border: 1px solid transparent;
   border-radius: 50%;
@@ -1784,7 +1788,6 @@ ul li {
       min-height: 0.5rem; } }
 
 .player__volume {
-  content: "";
   display: block;
   width: 1.125rem;
   height: 1.375rem;
@@ -1803,25 +1806,53 @@ ul li {
 .player__volumeback {
   width: 3.625rem;
   height: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative; }
-  .player__volumeback:before {
-    content: "";
-    display: block;
-    height: 0.25rem;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    background: #626262;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
   @media screen and (max-width: 768px) {
     .player__volumeback {
       width: 3.3125rem; } }
   @media screen and (max-width: 480px) {
     .player__volumeback {
       width: 2.25rem; } }
+
+.player__volumeback-level {
+  width: 3.625rem;
+  height: 0.25rem;
+  -webkit-appearance: none;
+  outline: none;
+  border: 1px solid transparent;
+  background-color: #626262; }
+  @media screen and (max-width: 768px) {
+    .player__volumeback-level {
+      width: 3.3125rem;
+      height: 0.125rem; } }
+  @media screen and (max-width: 480px) {
+    .player__volumeback-level {
+      width: 2.25rem; } }
+
+.player__volumeback-level::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0.8125rem;
+  height: 0.8125rem;
+  background: #626262;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s; }
+  @media screen and (max-width: 768px) {
+    .player__volumeback-level::-webkit-slider-thumb {
+      width: 0.6875rem;
+      height: 0.6875rem; } }
+  @media screen and (max-width: 480px) {
+    .player__volumeback-level::-webkit-slider-thumb {
+      width: 0.5rem;
+      height: 0.5rem; } }
 
 .player__volumeback-button {
   width: 0.8125rem;
