@@ -30,6 +30,7 @@
   @include phones {
     font-size: rem(39px);
     margin-bottom: 4%;
+    z-index: 30;
   }
 
 }
