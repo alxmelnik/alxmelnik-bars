@@ -585,10 +585,11 @@ const muteSound = document.querySelector('.player__volume');
 
 
 muteSound.addEventListener('click', function (event) {
-  if (video.volume ) {
+  if (video.volume) {
     volume.value = 0;
     video.volume = 0;
   }
+
 })
 
 

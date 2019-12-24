@@ -11,12 +11,19 @@ $tablets: 768px;
 $laptop: 992px;
 $desktop: 1200px;
 
-@import './css/layout/_normalize.scss';
+
+// @import './css/layout/*.scss';   не работает
+ 
+// @import './css/layout/normalize.scss';  уже подключили в gulp
 
 @import './css/layout/media.scss';
 
-@import './css/layout/_fonts.scss';
-@import './css/layout/_base.scss';
+@import './css/layout/fonts.scss';
+@import './css/layout/base.scss';
+
+
+// @import './css/block/*.scss';
+
 
 @import './css/block/about.scss';
 @import './css/block/head.scss';
