@@ -6,12 +6,13 @@
 
 
 .btn__link {
-  font-size: 19px;
+  display: block;
+  font-size: rem(19px);
   font-weight: 800;
   color: $green;
   background-color: $white; 
-  border-radius: 29px;
-  padding: 23px 34px;
+  border-radius: rem(29px);
+  padding: rem(19px)  rem(34px);
   text-decoration: none;
   cursor: pointer;
   text-transform: uppercase;

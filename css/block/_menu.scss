@@ -1,0 +1,140 @@
+.menu {
+  color: $white;
+  background-image: url('../../img/menu/bg/bg_cookie.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+
+}
+
+// .menu__container {
+//   height: 100%;
+//   width: rem(1100px);
+//   // border: 3px dotted green;
+//   position: relative;
+// }
+
+.menu__title {
+  font-size: rem(48px);
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 15%;
+  left: 7%;
+  z-index: 0;
+
+  @include phones {
+    display: none;
+  }
+}
+
+.menu-accordeon__trigger--milk {
+  background: url('../../img/menu/bg/bg_bars_milk.png') center center no-repeat;
+
+}
+
+.menu-accordeon__trigger--honey {
+  background: url('../../img/menu/bg/bg_bars_honey.png') center center no-repeat;
+}
+
+.menu-accordeon__trigger--wild {
+  background: url('../../img/menu/bg/bg_wild_berries.png') center center no-repeat;
+}
+
+.menu-accordeon {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.menu-accordeon__list {
+  font-size: rem(16px);
+  display: flex;
+  height: 100%;
+
+
+
+}
+
+.menu-accordeon__item {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+
+  // @include phones {
+  //   &:nth-child(2), &:nth-child(3) 
+  //   {
+  //     // display:none;
+  //     width: 0;
+  //     overflow: hidden;
+  //   }
+  // }
+
+
+}
+
+.menu-accordeon__trigger {
+  cursor: pointer;
+  display: inline-block;
+  min-width: rem(100px);
+  position: relative;
+  background-size: cover;
+
+  @include phones {
+    min-width: rem(80px);
+  }
+
+}
+
+.menu-accordeon__trigger--active~.menu-accordeon__content {
+  // width: rem(430px);
+  width: 40vw;
+  background-color: rgba(58, 61, 63, 0.93);
+
+  @include phones {
+    // width: 80vw;
+    width: auto;
+  }
+
+}
+
+.menu-accordeon__trigger-text {
+  display: block;
+  font-size: rem(48px);
+  font-weight: 500;
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  transform-origin: 0 50%;
+
+  @include phones {
+    font-size: rem(36px);
+  }
+
+}
+
+.menu-accordeon__content {
+  width: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  z-index: 10;
+  transition: .5s;
+  position: relative;
+}
+
+.menu-accordeon__text {
+  font-size: rem(16px);
+  color: $white;
+  padding: rem(50px) rem(27px);
+}
+
+
+.menu-accordeon__close {
+  position: absolute;
+  top: 3%;
+  right: 6%;
+}

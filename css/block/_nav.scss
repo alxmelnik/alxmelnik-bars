@@ -1,20 +1,32 @@
+.nav {
+  padding: 0 4%;
+  flex: 1;
+  text-align: center;
+  @include tablets {
+    display: none;
+  }
+
+}
+
+
 .nav__list {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav__item {
-  display: flex;
-  align-items: center;
-  margin-right: 30px;
-
+  // margin-right: rem(30px);
+  margin-right: 4%;
+  
   &:last-child {
-    margin-right: 0px;
+    margin-right: rem(0px);
   }
 
 }
 
 .nav__link {
+  // white-space: nowrap;
   color: $white;
   text-decoration: none;
 }

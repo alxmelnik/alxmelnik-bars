@@ -1,0 +1,143 @@
+.team {
+  background-color: $white;
+  color: $black;
+  text-align: center;
+  background-image: url('../../img/team/bg/pattern_team.png');
+  background-repeat: no-repeat;
+  // background-size: cover;
+  background-position: top right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding-top: rem(69px);
+  position: relative;
+
+  &:after {
+    content: url('../../img/team/bg/raspberries.png');
+    position: absolute;
+    bottom: -6%;
+    left: 1%;
+    z-index: 20;
+
+    @include phones {
+      transform: scale(0.6);
+      bottom: -8%;
+      left: -6%;
+    }
+
+  }
+
+}
+
+.team__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.team__title {
+  font-size: rem(48px);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: rem(58px);
+
+  @include phones {
+    font-size: rem(40px);
+    margin-bottom: rem(16px);
+  }
+}
+
+.team-accordeon__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+
+
+}
+
+.team-accordeon__item {
+  // max-width: rem(220px);
+  max-width: 24%;
+
+  // margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: rem(0px);
+  }
+
+  @include tablets {
+    max-width: 46%;
+    margin-bottom: rem(10px);
+  }
+
+
+}
+
+.team__pic {
+  max-width: 100%;
+  // width: rem(220px);
+  // height: rem(288px);
+  // object-fit: cover;
+  // object-position: center;
+  margin-bottom: rem(26px);
+
+  @include phones {
+    max-width: rem(142px);
+    margin-bottom: rem(16px);
+  }
+
+}
+
+.team-accordeon__trigger {
+  cursor: pointer;
+  font-size: rem(21px);
+  font-weight: 500;
+  margin-bottom: rem(13px);
+  display: inline-flex;
+  align-items: center;
+
+  &:after {
+    content: "";
+    display: block;
+    width: rem(9px);
+    height: rem(7px);
+    background: url('../../img/team/btn_down.png') center center no-repeat;
+    margin-left: rem(6px);
+  }
+
+}
+
+.team-accordeon__trigger--active {
+  &:after {
+    background: url('../../img/team/btn_up.png') center center no-repeat;
+  }
+}
+
+.team-accordeon__content {
+  // height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.team-accordeon__trigger--active+.team-accordeon__content {
+  // height: 100%;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+.team-accordeon__profession {
+  font-size: rem(18px);
+  font-weight: normal;
+  margin-bottom: rem(6px);
+}
+
+.team-accordeon__info {
+  font-size: rem(18px);
+  color: $brownish-grey;
+  font-weight: 300;
+  padding-bottom: rem(1px);
+}

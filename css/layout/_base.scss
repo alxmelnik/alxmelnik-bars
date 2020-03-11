@@ -1,11 +1,31 @@
-html, body {
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: 15px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+
+
+html,
+body {
   height: 100%;
   font-family: 'alegreya_sans', sans-serif;
   font-style: normal;
-  font-size: 18px;
+  // font-size: 18px;
 }
 
-ul, h1, h2, h3, h4, p {
+ul,
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
   padding: 0;
 }
@@ -24,22 +44,40 @@ ul li {
 
 
 .wrapper {
+  position: relative;
+  // min-width: rem(1100px);
+  width: 100%;
+  // min-height: 100%;
+  height: 100%;
+  // display: flex;
+  // flex-direction: column;
   overflow: hidden;
-  min-width: 1100px;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 
-// .wrapper__content{
-//   flex: 1;
-// }
+.wrapper__content {
+  height: 100%;
+  transition: transform 1s;
+  // flex: 1;
+}
+
+.section {
+  height: 100vh;
+  height: 100%;
+
+  // min-height: rem(650px);
+
+
+  
+  @include phones {
+    min-height: auto;
+  }
+
+  // flex: 1;
+}
 
 .container {
   margin: 0 auto;
-  width: 940px;
+  max-width: rem(940px);
+  width: 95%;
 }
-
-
-
