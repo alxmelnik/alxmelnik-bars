@@ -1,0 +1,27 @@
+.contact {
+  @include tablets {
+    display: none;
+  }
+}
+
+.contact__phone{
+  display: flex;
+  align-items: center;
+  font-size: rem(24px);
+  color: $white;
+  text-decoration: none;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(12px);
+    height: rem(12px);
+    margin-right: rem(6px);
+    background-image: url('../../img/contact/telephone.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center ;
+  }
+
+}
