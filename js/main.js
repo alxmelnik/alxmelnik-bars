@@ -44,7 +44,7 @@ function noScroll() {
 hamburger.addEventListener('click', function () {
   fullScreenMenu.style.display = 'flex';
   increaseOpacity();
-  window.addEventListener('scroll', noScroll); 
+  window.addEventListener('scroll', noScroll);
 
 
 })
@@ -125,13 +125,13 @@ menuAccordeon.forEach(function (section) {
       closeMenuAccord[i].addEventListener('click', function (c) {
         // debugger;
         c.preventDefault();
-    
+
         if (section.classList.contains(activeClassMenu)) {
           section.classList.remove(activeClassMenu)
         }
-        
+
       });
-      
+
     }
 
 
@@ -244,7 +244,7 @@ sendButton.addEventListener('click', event => {
         console.log("Все ок!");
         // debugger;
         openModal.style.display = 'flex';
-        
+
         // window.addEventListener('scroll', noScroll); 
       } else {
         console.log("Не отправлено!");
@@ -294,32 +294,301 @@ function validateField(field) {
 
 //=============================
 
+// One Page Scroll ================
+
+const sections = $('.section');
+const display = $('.wrapper__content');
+let inScroll = false;
+
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
+const performTransition = sectionEq => {
+
+  if (inScroll == false) {
+    inScroll = true;
+
+    const position = sectionEq * -100;
+
+    if (isNaN(position)) {
+      console.error("передано не верное значение в performTransition")
+    }
+
+
+    sections
+      .eq(sectionEq)
+      .addClass('active')
+      .siblings()
+      .removeClass('active');
+
+    display.css({
+      transform: `translateY(${position}%)`
+    })
+
+    setTimeout(() => {
+      inScroll = false;
+
+      $('.fixed-menu__item')
+        .eq(sectionEq)
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
+
+    }, 500);
+
+  }
+
+}
+
+
+const scrollToSection = direction => {
+  const activeSection = sections.filter('.active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  if (direction == 'next' && nextSection.length) {
+    performTransition(nextSection.index())
+  }
+
+  if (direction == 'prev' && prevSection.length) {
+    performTransition(prevSection.index())
+  }
+
+}
 
 
 
 
-// // Reviews========================= только иконки меняет (не рабочий)
+$(window).on('wheel', e => {
+  const deltaY = e.originalEvent.deltaY;
 
 
-// const reviewsAccordeon = document.querySelectorAll('.reviews__content');
-// const activeClassReviews = 'reviews__content--active';
+  if (deltaY > 0) {
+    scrollToSection('next');
+    // console.log('next');
+  }
 
-// const reviewsAvatarAcc = document.querySelectorAll('.reviews__link')
-// const activeClassAvatar = 'reviews__link--active';
+  if (deltaY < 0) {
+    scrollToSection('prev');
+    // console.log('prev');
+  }
 
-// reviewsAvatarAcc.forEach(function (section) {
 
-//   section.addEventListener('click', function (e) {
-//     // debugger;
-//     e.preventDefault();
+});
 
-//     reviewsAvatarAcc.forEach(function (section) {
-//       section.classList.remove(activeClassAvatar)
-//     })
+$(window).on('keydown', e => {
+  const tagName = e.target.tagName.toLowerCase();
 
-//     section.classList.add(activeClassAvatar)
+  if (tagName !== 'input' && tagName !== 'textarea') {
 
-//   })
+    switch (e.keyCode) {
+      case 38:
+        scrollToSection('prev');
+        break;
 
-// })
+      case 40:
+        scrollToSection('next');
+        break;
+    }
+
+  }
+
+
+});
+
+
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+  const target = $this.attr('data-scroll-to');
+
+  performTransition(target);
+
+});
+
+
+
+if (isMobile) {
+
+  $("body").swipe({
+    //Generic swipe handler for all directions
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      const scrollDirections = direction == 'up' ? 'next' : 'prev';
+
+      scrollToSection(scrollDirections);
+
+    }
+  });
+
+}
+
+
+
+// Map ============================
+
+ymaps.ready(init);
+
+
+function init() {
+  var map = new ymaps.Map('map', {
+    center: [59.94, 30.32],
+    center: [55.75, 37.59],
+    zoom: 14,
+    controls: ['zoomControl'],
+    behaviors: ['drag']
+  });
+
+  var placemark = new ymaps.Placemark([55.746, 37.581], {
+    hintContent: 'Батончики',
+    balloonContent: 'Смоленская улица, 6'
+
+  },
+
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/location/mark.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-23, -57]
+
+    });
+
+  var placemark1 = new ymaps.Placemark([55.758, 37.583], {
+    hintContent: 'Батончики',
+    balloonContent: 'Новинский бульвар, 31'
+
+  },
+
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/location/mark.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-23, -57]
+
+    });
+
+  var placemark2 = new ymaps.Placemark([55.750, 37.604], {
+    hintContent: 'Батончики',
+    balloonContent: 'улица Знаменка, 19'
+  },
+
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/location/mark.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-23, -57]
+
+    });
+
+  var placemark3 = new ymaps.Placemark([55.7579, 37.6224], {
+    hintContent: 'Батончики',
+    balloonContent: 'Театральный проезд, 2'
+  },
+
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/location/mark.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-23, -57]
+
+    });
+
+  map.geoObjects.add(placemark);
+  map.geoObjects.add(placemark1);
+  map.geoObjects.add(placemark2);
+  map.geoObjects.add(placemark3);
+}
+
+// ==============
+
+
+// Player
+
+
+const wrapPlayer = document.querySelector('.player__wrapper');
+
+const playVideo = document.querySelector('.player__start');
+const playVideoIcon = document.querySelector('.player__splash');
+
+const video = document.querySelector('.player__video');
+
+const volume = document.querySelector('.player__volumeback-level');
+
+playVideo.addEventListener('click', function () {
+  if (wrapPlayer.classList.contains('active')) {
+    wrapPlayer.classList.remove('active');
+    playVideo.classList.remove('paused');
+    video.pause();
+
+  } else {
+    wrapPlayer.classList.add('active');
+    playVideo.classList.add('paused');
+    video.play();
+
+  }
+
+  if (typeof interval !== "undefined") {
+    clearInterval(interval);
+  }
+
+  var interval = setInterval(() => {
+    const durationSec = video.duration;
+    const completedSec = video.currentTime;
+    const completedPercent = (completedSec / durationSec) * 100;
+
+    $(".player__playback-button").css({
+      left: `${completedPercent}%`
+    });
+
+  }, 1000);
+
+
+})
+
+
+$(".player__playback").on("click", e => {
+  const bar = $(e.currentTarget);
+  const newButtonPosition = e.pageX - bar.offset().left;
+  const buttonPosPercent = (newButtonPosition / bar.width()) * 100;
+  const newPlayerTimeSec = (video.duration / 100) * buttonPosPercent;
+
+  $(".player__playback-button").css({
+    left: `${buttonPosPercent}%`
+  });
+
+  video.currentTime = newPlayerTimeSec;
+});
+
+
+
+playVideoIcon.addEventListener('click', function () {
+  playVideo.click();
+})
+
+
+
+
+video.addEventListener('click', function (event) {
+  if (event.target === video) {
+
+    playVideo.click();
+  }
+})
+
+
+
+function changeVolume() {
+  video.volume = volume.value / 100;
+}
+
+
+const muteSound = document.querySelector('.player__volume');
+
+
+muteSound.addEventListener('click', function (event) {
+  if (video.volume) {
+    volume.value = 0;
+    video.volume = 0;
+  }
+
+})
 
