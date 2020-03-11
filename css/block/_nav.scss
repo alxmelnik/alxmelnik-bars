@@ -23,11 +23,21 @@
     margin-right: rem(0px);
   }
 
+  &:hover {
+    transform: translateY(-2px);
+    transition: 0.3s;
+  }
 }
 
 .nav__link {
   // white-space: nowrap;
   color: $white;
   text-decoration: none;
+
+  &:hover {
+    color: black;
+    transition: 0.3s;
+  }
+  
 }
 

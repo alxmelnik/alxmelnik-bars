@@ -1,6 +1,6 @@
 .how-work {
   background-color: $light-grey;
-  background-image: url('../../img/how-work/bg/bg_how-work.png');
+  background-image: url('img/how-work/bg/bg_how-work.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -12,7 +12,7 @@
   position: relative;
 
   &:after {
-    content: url('../../img/how-work/bg/blackberry.png');
+    content: url('img/how-work/bg/blackberry.png');
     position: absolute;
     bottom: -14%;
     right: -6%;

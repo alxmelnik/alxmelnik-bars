@@ -2,7 +2,7 @@
   background-color: $white;
   color: $brownish-grey;
 
-  background-image: url('../../img/reviews/bg/strawberry_reviews.png');
+  background-image: url('img/reviews/bg/strawberry_reviews.png');
   background-repeat: no-repeat;
   // background-size: cover;
   background-position: top right;
@@ -14,7 +14,7 @@
   // padding-top: rem(69px);
 
   &:after {
-    content: url('../../img/reviews/bg/berries_reviews_new.png');
+    content: url('img/reviews/bg/berries_reviews_new.png');
     position: absolute;
     bottom: -16%;
     left: 0%;
@@ -70,7 +70,7 @@
   min-width: rem(940px);
   min-height: rem(345px);
   padding: rem(50px) rem(180px) rem(30px) rem(45px);
-  background-image: url('../../img/reviews/bg/bg_reviews.png');
+  background-image: url('img/reviews/bg/bg_reviews.png');
   background-repeat: no-repeat, no-repeat;
   // background-size: cover;
   background-position: center center;
@@ -91,7 +91,7 @@
     min-width: rem(460px);
     min-height: rem(600px);
 
-    background-image: url('../../img/reviews/bg/bg_branch.png');
+    background-image: url('img/reviews/bg/bg_branch.png');
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
     background-position: center center;
