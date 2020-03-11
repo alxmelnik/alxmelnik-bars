@@ -1,7 +1,7 @@
 .slider {
   background-color: $light-grey;
 
-  background-image: url('../../img/slider/bg/pattern_slider.png');
+  background-image: url('img/slider/bg/pattern_slider.png');
 
   background-repeat: no-repeat;
   // background-size: cover;
@@ -12,7 +12,7 @@
   position: relative;
 
   &:after {
-    content: url('../../img/slider/bg/blueberries.png');
+    content: url('img/slider/bg/blueberries.png');
     position: absolute;
     bottom: -9%;
     right: 1%;

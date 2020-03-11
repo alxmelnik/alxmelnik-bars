@@ -42,6 +42,13 @@
     }
   }
 
+  .foot__contact {
+    &:hover {
+      transform: translateY(-2px);
+      transition: 0.3s;
+    }
+  }
+
   .foot__contact--phone{
     display: flex;
     align-items: center;
@@ -57,7 +64,7 @@
       width: rem(12px);
       height: rem(12px);
       margin-right: rem(6px);
-      background-image: url('../../img/foot/foot_phone.png');
+      background-image: url('img/foot/foot_phone.png');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center center ;

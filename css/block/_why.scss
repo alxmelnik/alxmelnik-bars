@@ -3,7 +3,7 @@
   color: $brownish-grey;
   text-align: center;
 
-  background-image: url('../../img/why/bg/raspberry.png'), url('../../img/why/bg/pattern.png');
+  background-image: url('img/why/bg/raspberry.png'), url('img/why/bg/pattern.png');
   background-repeat: no-repeat, no-repeat;
   // background-size: cover;
   background-position: bottom left, center left;
@@ -90,7 +90,7 @@
   }
   
   &::after {
-    content: url('../../img/why/icons/circle.png');
+    content: url('img/why/icons/circle.png');
     position: absolute;
     top: 20%;
     right: -27%;

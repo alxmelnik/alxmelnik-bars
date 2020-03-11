@@ -1,7 +1,7 @@
 .delivery {
   color: $green;
 
-  background-image: url('../../img/delivery/bg/pattern_delivery.png');
+  background-image: url('img/delivery/bg/pattern_delivery.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -228,7 +228,7 @@
   height: rem(14px);
   // border-radius: 50%;
   // background-color: $green;
-  background: url("../../img/delivery/check.png") center center no-repeat ;
+  background: url("img/delivery/check.png") center center no-repeat ;
   opacity: 0;
   position: absolute;
   top: rem(2px);
@@ -251,6 +251,8 @@
   @include phones{
     margin-top: rem(25px);
   }
+
+  
 }
 
 .form__btn {
@@ -265,6 +267,12 @@
   text-transform: uppercase;
   border: 1px solid transparent;
   margin-right: rem(29px);
+  outline: none;
+  
+  &:hover {
+    transform: translateY(-2px);
+    transition: 0.3s;
+  }
 }
 
 .form__btn-reset {
@@ -275,6 +283,11 @@
   background: transparent;
   border: 1px solid transparent;
   outline: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    transition: 0.3s;
+  }
 }
 
 .error {

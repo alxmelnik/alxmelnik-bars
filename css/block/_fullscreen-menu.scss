@@ -26,12 +26,20 @@
 .fullscreen-menu__item {
   font-size: rem(36px);
   line-height: 2;
+
+  &:hover {
+    transform: translateY(-2px);
+    transition: 0.3s;
+  }
 }
 
 .fullscreen-menu__link {
   color: $white;
   text-decoration: none;
   cursor: pointer;
+
+  
+  
   
 }
 
@@ -39,4 +47,9 @@
   position: absolute;
   top: 20%;
   right: 20%;
+  
+  &:hover {
+    transform: translateY(-2px);
+    transition: 0.3s;
+  }
 } 
