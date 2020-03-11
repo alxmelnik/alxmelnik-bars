@@ -8,7 +8,8 @@
 
 | ФИО | Мельник Александр Игоревич |
 | ------ | ------ |
-| Ссылка на репозиторий | https://github.com/alxmelnik/alxmelnik-bars|
+| Почта| alxmelnik@yandex.ru |
+| Ссылка на репозиторий | https://github.com/alxmelnik/alxmelnik-bars |
 | Ссылка на рабочий сайт | https://alxmelnik.github.io/alxmelnik-bars |
 | Примечания | - |
 
