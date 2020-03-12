@@ -296,49 +296,49 @@ function validateField(field) {
 
 // One Page Scroll ================ отключен
 
-const sections = $('.section');
-const display = $('.wrapper__content');
-let inScroll = false;
+// const sections = $('.section');
+// const display = $('.wrapper__content');
+// let inScroll = false;
 
-const mobileDetect = new MobileDetect(window.navigator.userAgent);
-const isMobile = mobileDetect.mobile();
+// const mobileDetect = new MobileDetect(window.navigator.userAgent);
+// const isMobile = mobileDetect.mobile();
 
-const performTransition = sectionEq => {
+// const performTransition = sectionEq => {
 
-  if (inScroll == false) {
-    inScroll = true;
+//   if (inScroll == false) {
+//     inScroll = true;
 
-    const position = sectionEq * -100;
+//     const position = sectionEq * -100;
 
-    if (isNaN(position)) {
-      console.error("передано не верное значение в performTransition")
-    }
+//     if (isNaN(position)) {
+//       console.error("передано не верное значение в performTransition")
+//     }
 
 
-    sections
-      .eq(sectionEq)
-      .addClass('active')
-      .siblings()
-      .removeClass('active');
+//     sections
+//       .eq(sectionEq)
+//       .addClass('active')
+//       .siblings()
+//       .removeClass('active');
 
-    display.css({
-      transform: `translateY(${position}%)`
-    })
+//     display.css({
+//       transform: `translateY(${position}%)`
+//     })
 
-    setTimeout(() => {
-      inScroll = false;
+//     setTimeout(() => {
+//       inScroll = false;
 
-      $('.fixed-menu__item')
-        .eq(sectionEq)
-        .addClass('active')
-        .siblings()
-        .removeClass('active');
+//       $('.fixed-menu__item')
+//         .eq(sectionEq)
+//         .addClass('active')
+//         .siblings()
+//         .removeClass('active');
 
-    }, 500);
+//     }, 500);
 
-  }
+//   }
 
-}
+// }
 
 
 // const scrollToSection = direction => {
@@ -362,137 +362,8 @@ const performTransition = sectionEq => {
 
 
 
-$(window).on('wheel', e => {
-  const deltaY = e.originalEvent.deltaY;
-
-  if (deltaY > 0) {
-    scrollToSection('next');
-    // console.log('next');
-  }
-
-  if (deltaY < 0) {
-    scrollToSection('prev');
-    // console.log('prev');
-  }
-
-
-});
-
-$(window).on('keydown', e => {
-  const tagName = e.target.tagName.toLowerCase();
-
-  if (tagName !== 'input' && tagName !== 'textarea') {
-
-    switch (e.keyCode) {
-      case 38:
-        scrollToSection('prev');
-        break;
-
-      case 40:
-        scrollToSection('next');
-        break;
-    }
-
-  }
-
-
-});
-
-
-$("[data-scroll-to]").on("click", e => {
-  e.preventDefault();
-  const $this = $(e.currentTarget);
-  const target = $this.attr('data-scroll-to');
-
-  performTransition(target);
-
-});
-
-
-
-if (isMobile) {
-
-  $("body").swipe({
-    //Generic swipe handler for all directions
-    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-      const scrollDirections = direction == 'up' ? 'next' : 'prev';
-
-      scrollToSection(scrollDirections);
-
-    }
-  });
-
-}
-
-
-
-
-
-// ==============
-
-
-
-// const duration = document.querySelector('.player__playback-ratio');
-// duration.value = 0;
-// duration.min = 0;
-// duration.max = video.duration;
-
-
-
-// const duration = document.querySelector('.player__playback-button');
-// function initDuration() {
-//   duration.value = video.currentTime;
-// }
-
-
-
-
-
-
-// const onPlayerReady = () => {
-//   let interval;
-//   let durationSec = video.duration;
-//   console.log (durationSec);
-
-//   // $(".player__duration-estimate").text(formatTime(durationSec));
-
-//   // if (typeof interval !== "undefined") {
-//   //   clearInterval(interval);
-//   // }
-
-
-//   interval = setInterval(() => {
-//     const completedSec = video.currentTime;
-//     const completedPercent = (completedSec / durationSec) * 100;
-
-//     $(".player__playback-button").css({
-//       left: `${completedPercent}%`
-//     });
-
-//     // $(".player__duration-completed").text(formatTime(completedSec));
-//   }, 1000);
-// };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// $(window).on('wheel', e => {
+//   const deltaY = e.originalEvent.deltaY;
 
 //   if (deltaY > 0) {
 //     scrollToSection('next');
