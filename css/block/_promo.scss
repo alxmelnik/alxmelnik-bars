@@ -91,24 +91,7 @@
 .promo__right {
   position: relative;
 
-  &:after {
-    content: url('img/promo/bg/bg-decoration.png');
-    position: absolute;
-    top: 57%;
-    right: 102%;
-    transform: translateX(50%);
-
-    @include tablets {
-      top: 39%;
-      right: 122%;
-    }
-
-    @include phones { 
-    transform: scale(0.6);
-    top: 12%;
-    right: -91%;
-    }
-  }
+  
 
   @include tablets {
     max-width: rem(403px);
