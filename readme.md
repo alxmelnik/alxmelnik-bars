@@ -16,7 +16,7 @@
 
 ##  Чтобы развернуть проект необходимо:
 ```sh
-$ git clone https://github.com/alxmelnik/melnik-web.github.io.git
+$ git clone https://github.com/alxmelnik/alxmelnik-bars.git
 $ cd alxmelnik-bars-master
 $ npm run gulp
 ```
