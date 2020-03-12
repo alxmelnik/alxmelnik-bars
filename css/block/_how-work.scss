@@ -1,10 +1,6 @@
 .how-work {
   background-color: $light-grey;
-<<<<<<< HEAD
-  background-image: url('../../img/how-work/bg/bg_how-work.png');
-=======
   background-image: url('img/how-work/bg/bg_how-work.png');
->>>>>>> newbranch
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -16,11 +12,7 @@
   position: relative;
 
   &:after {
-<<<<<<< HEAD
-    content: url('../../img/how-work/bg/blackberry.png');
-=======
     content: url('img/how-work/bg/blackberry.png');
->>>>>>> newbranch
     position: absolute;
     bottom: -14%;
     right: -6%;
