@@ -359,8 +359,139 @@ const performTransition = sectionEq => {
 
 
 
-// $(window).on('wheel', e => {
-//   const deltaY = e.originalEvent.deltaY;
+
+
+
+$(window).on('wheel', e => {
+  const deltaY = e.originalEvent.deltaY;
+
+  if (deltaY > 0) {
+    scrollToSection('next');
+    // console.log('next');
+  }
+
+  if (deltaY < 0) {
+    scrollToSection('prev');
+    // console.log('prev');
+  }
+
+
+});
+
+$(window).on('keydown', e => {
+  const tagName = e.target.tagName.toLowerCase();
+
+  if (tagName !== 'input' && tagName !== 'textarea') {
+
+    switch (e.keyCode) {
+      case 38:
+        scrollToSection('prev');
+        break;
+
+      case 40:
+        scrollToSection('next');
+        break;
+    }
+
+  }
+
+
+});
+
+
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+  const target = $this.attr('data-scroll-to');
+
+  performTransition(target);
+
+});
+
+
+
+if (isMobile) {
+
+  $("body").swipe({
+    //Generic swipe handler for all directions
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      const scrollDirections = direction == 'up' ? 'next' : 'prev';
+
+      scrollToSection(scrollDirections);
+
+    }
+  });
+
+}
+
+
+
+
+
+// ==============
+
+
+
+// const duration = document.querySelector('.player__playback-ratio');
+// duration.value = 0;
+// duration.min = 0;
+// duration.max = video.duration;
+
+
+
+// const duration = document.querySelector('.player__playback-button');
+// function initDuration() {
+//   duration.value = video.currentTime;
+// }
+
+
+
+
+
+
+// const onPlayerReady = () => {
+//   let interval;
+//   let durationSec = video.duration;
+//   console.log (durationSec);
+
+//   // $(".player__duration-estimate").text(formatTime(durationSec));
+
+//   // if (typeof interval !== "undefined") {
+//   //   clearInterval(interval);
+//   // }
+
+
+//   interval = setInterval(() => {
+//     const completedSec = video.currentTime;
+//     const completedPercent = (completedSec / durationSec) * 100;
+
+//     $(".player__playback-button").css({
+//       left: `${completedPercent}%`
+//     });
+
+//     // $(".player__duration-completed").text(formatTime(completedSec));
+//   }, 1000);
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //   if (deltaY > 0) {
