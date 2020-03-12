@@ -16,6 +16,7 @@ html {
 html,
 body {
   height: 100%;
+  max-width: rem(1800px);
   font-family: 'alegreya_sans', sans-serif;
   font-style: normal;
 }
@@ -49,9 +50,9 @@ ul li {
   width: 100%;
   // min-height: 100%;
   height: 100%;
-  // display: flex;
-  // flex-direction: column;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  // overflow: hidden;
 }
 
 
